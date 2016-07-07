@@ -18,6 +18,7 @@
   "homepage": "https://github.com/saix93/dsp-bot#readme",
   "dependencies": {
     "discord.js": "^8.0.0",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "q": "^1.4.1"
   }
 }
