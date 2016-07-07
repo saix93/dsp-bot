@@ -111,3 +111,60 @@ function image(message, params) {
     dspBot.sendMessage(message, "https://www.google.es/search?q=" + params + "&espv=2&biw=1920&bih=955&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiXnZnfy9_NAhVCPRQKHcK7BUcQ_AUIBigB");
   }
 }
+//////////
+// BUSQUEDA EN WIKI
+dspBot.on("message", function(message) {
+	var contenido = message.content;
+	if(contenido.split(" ")[1]!=undefined && contenido.charAt(0)==="_"){
+		var parametros = contenido.split(" ");
+		var strParam ="";
+		for (var i = 1; i<parametros.length; i++) {
+			if (i>1) {
+				strParam+="+"+parametros[i];
+			}else{
+				strParam+=parametros[i];
+			}
+
+		}
+		if (contenido.indexOf("_wiki")!=-1) {
+
+			dspBot.reply(message,searchWiki(strParam));
+		}
+	}
+});
+
+// BUSQUEDA EN NYAA
+dspBot.on("message", function(message) {
+	var contenido = message.content;
+	if(contenido.split(" ")[1]!=undefined && contenido.charAt(0)==="_"){
+		var parametros = contenido.split(" ");
+		var strParam ="";
+		for (var i = 1; i<parametros.length; i++) {
+			if (i>1) {
+				strParam+="+"+parametros[i];
+			}else{
+				strParam+=parametros[i];
+			}
+
+		}
+		if (contenido.indexOf("_nyaa")!=-1) {
+
+			dspBot.reply(message,searchNyaa(strParam+"+horriblesubs+1080"));
+		}
+	}
+});
+
+
+dspBot.on("message", function(message) {
+	if(message.content.indexOf("nadeko")!=-1) {
+		dspBot.reply(message, "Esa es una zorra!");
+	}
+});
+
+function searchWiki(param){
+	return "https://es.wikipedia.org/w/index.php?search="+param;
+}
+
+function searchNyaa(param){
+	return "http://www.nyaa.se/?page=search&cats=0_0&filter=0&term="+param;
+}
