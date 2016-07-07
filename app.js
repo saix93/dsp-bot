@@ -1,5 +1,6 @@
 var express = require("express");
 var Discord = require("discord.js");
+var constants = require("./constants.js");
 var Q = require("q");
 var app, dspBot;
 var commandList = {
@@ -48,7 +49,7 @@ function initialize() {
   });
 
   //Conexión con el servidor
-  dspBot.loginWithToken("MjAwMzE0ODg4NDAzNDE5MTM4.Cl7mmA.-5feNXiIC6WbUt4b-uAVtt0rDt0");
+  dspBot.loginWithToken(constants.token);
 
   //Ejecución tras la conexión.
 }
