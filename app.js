@@ -5,9 +5,11 @@ var Q = require("q");
 var app, dspBot;
 var commandList = {
   image: image,
-  joinChannel: joinChannel,
-  leaveChannel: leaveChannel,
+  join: join,
+  leave: leave,
+  reset: reset,
   alarm: alarm,
+  isPlaying: isPlaying,
   test: test
 };
 
@@ -45,7 +47,7 @@ function initialize() {
   });
 
   dspBot.on("error", function(error) {
-    leaveChannel();
+    leave();
   });
 
   //Conexión con el servidor
@@ -54,28 +56,58 @@ function initialize() {
   //Ejecución tras la conexión.
 }
 
-function test() {
-  //dspBot.("TEST");
-  if (dspBot.voiceConnection) {
-    dspBot.voiceConnection.playFile("./lagazo.mp3", {
-      volume: 0.25
-    }, function(error, intent) {
-      console.log(error);
-      intent.on("error", function(err){
-        console.log("intent error: " + err);
+function test(message) {
+  if (dspBot.internal.voiceConnection) {
+    //dspBot.voiceConnection.setSpeaking(true);
+    // dspBot.voiceConnection.playFile("test.mp3", {
+    //   volume: 0.25
+    // }, function(error, intent) {
+    //   console.log(error);
+    //   intent.on("error", function(err){
+    //     console.log("intent error: " + err);
+    //   });
+    // });
+    dspBot.internal.voiceConnection.encoder.sanityCheckPassed = true;
+
+    var connection = dspBot.internal.voiceConnection;
+
+    connection.playFile("./lagazo.mp3", function(error, intent) {
+      console.log("Error: " + error);
+      dspBot.reply(message, "Esto empieza");
+
+      intent.on("time", function() {
+        isPlaying();
+      });
+
+      intent.on("end", function() {
+        dspBot.reply(message, "Ha acabado");
+      });
+
+      intent.on("error", function() {
+        dspBot.reply(message, "Ha habido un error");
       });
     });
+
+    // var connection = dspBot.internal.voiceConnection;
+    // connection.playFile("test");
   }
 }
 
-function joinChannel() {
-  dspBot.joinVoiceChannel("80715949010845696");
+function isPlaying() {
+  console.log("Is playing: " + dspBot.internal.voiceConnection.playing);
 }
 
-function leaveChannel() {
-  if (dspBot.voiceConnection) {
-    dspBot.voiceConnection.destroy();
-  }
+function join() {
+  dspBot.joinVoiceChannel("178875028593573888");
+}
+
+function leave() {
+  dspBot.internal.voiceConnection.destroy(); //leaveVoiceChannel()
+}
+
+function reset() {
+  join();
+  leave();
 }
 
 function alarm(message, params) {
@@ -110,61 +142,4 @@ function image(message, params) {
     params = params.split(" ").join("+").split("-").join("+");
     dspBot.sendMessage(message, "https://www.google.es/search?q=" + params + "&espv=2&biw=1920&bih=955&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiXnZnfy9_NAhVCPRQKHcK7BUcQ_AUIBigB");
   }
-}
-//////////
-// BUSQUEDA EN WIKI
-dspBot.on("message", function(message) {
-	var contenido = message.content;
-	if(contenido.split(" ")[1]!=undefined && contenido.charAt(0)==="_"){
-		var parametros = contenido.split(" ");
-		var strParam ="";
-		for (var i = 1; i<parametros.length; i++) {
-			if (i>1) {
-				strParam+="+"+parametros[i];
-			}else{
-				strParam+=parametros[i];
-			}
-
-		}
-		if (contenido.indexOf("_wiki")!=-1) {
-
-			dspBot.reply(message,searchWiki(strParam));
-		}
-	}
-});
-
-// BUSQUEDA EN NYAA
-dspBot.on("message", function(message) {
-	var contenido = message.content;
-	if(contenido.split(" ")[1]!=undefined && contenido.charAt(0)==="_"){
-		var parametros = contenido.split(" ");
-		var strParam ="";
-		for (var i = 1; i<parametros.length; i++) {
-			if (i>1) {
-				strParam+="+"+parametros[i];
-			}else{
-				strParam+=parametros[i];
-			}
-
-		}
-		if (contenido.indexOf("_nyaa")!=-1) {
-
-			dspBot.reply(message,searchNyaa(strParam+"+horriblesubs+1080"));
-		}
-	}
-});
-
-
-dspBot.on("message", function(message) {
-	if(message.content.indexOf("nadeko")!=-1) {
-		dspBot.reply(message, "Esa es una zorra!");
-	}
-});
-
-function searchWiki(param){
-	return "https://es.wikipedia.org/w/index.php?search="+param;
-}
-
-function searchNyaa(param){
-	return "http://www.nyaa.se/?page=search&cats=0_0&filter=0&term="+param;
 }
