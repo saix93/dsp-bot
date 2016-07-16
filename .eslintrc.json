@@ -1,0 +1,27 @@
+{
+    "rules": {
+        "linebreak-style": ["error", "windows"],
+        "no-mixed-requires": 1,
+        "no-new-require": 1,
+        "no-path-concat": 1,
+        "no-sync": 1,
+        "max-len": 0,
+        "indent": [
+            "error",
+            4
+        ],
+        "align-function-arguments": 0,
+        "align-multiline-assignment": 0,
+        "assert-fail-single-argument": 0,
+        "new-with-error": 0,
+        "no-deepEqual": 0,
+        "no-definegetter-definesetter": 0
+    },
+    "globals": {
+        "require": true,
+        "module": true,
+        "console": true,
+        "process": true,
+        "exports": true
+    }
+}

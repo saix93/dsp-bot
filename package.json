@@ -19,6 +19,7 @@
   "dependencies": {
     "discord.js": "^8.0.0",
     "express": "^4.14.0",
+    "log4js": "^0.6.37",
     "q": "^1.4.1"
   }
 }

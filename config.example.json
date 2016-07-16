@@ -1,0 +1,21 @@
+{
+    "bot": {
+        "token": "BOT TOKEN"
+    },
+    "settings": {
+        "prefix": "CHARACTER TO IDENTIFY COMMANDS",
+        "default": {
+            "voiceChannel": "ID FOR DEFAULT VOICE CHANNEL",
+            "textChannel": "ID FOR DEFAULT TEXT CHANNEL"
+        }
+    },
+    "permissions": [
+        ["USER ID'S FOR", "BASIC COMMANDS"],
+        ["USER ID'S FOR", "ADVANCED COMMANDS"],
+        ["USER ID'S FOR", "OWNER COMMANDS"]
+    ],
+    "api_keys": {
+        "google": "GOOGLE API KEY"
+    },
+    "log_level": "LOGGIN LEVEL: OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL"
+}
