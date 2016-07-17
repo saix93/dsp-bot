@@ -19,14 +19,14 @@ var bot = new Discord.Client();
 
 initialize();
 
-function setListeners() {
-    bot.on('ready', onReady);
-    bot.on('message', onMessage);
-}
-
 function initialize() {
     bot.loginWithToken(config.bot.token);
     setListeners();
+}
+
+function setListeners() {
+    bot.on('ready', onReady);
+    bot.on('message', onMessage);
 }
 
 function onReady() {
@@ -44,7 +44,7 @@ function onMessage(message) {
             try {
                 commands[command].execute(message, params);
             } catch (error) {
-                logger.warn('');
+                logger.warn(error.toString());
                 bot.reply(message, error.toString());
             }
         } else {

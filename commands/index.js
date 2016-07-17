@@ -7,7 +7,7 @@ var commands = [];
 require('fs').readdirSync(normalizedPath).forEach(function(file) {
     var comm = require('./commandFiles/' + file);
     commands[comm.properties.name] = comm;
-    logger.debug(`Added command ${comm.properties.name}`);
+    logger.debug(`Command "${comm.properties.name}" loaded`);
 });
 
 module.exports = commands;

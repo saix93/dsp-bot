@@ -1,16 +1,31 @@
 'use strict';
-var Command = require('../../lib/command.js');
+var Command = require('../../lib/command.js'),
+    config = require('../../config.json');
 
-var command = new Command({
-    name: 'leave',
-    description: '',
-    help: 'Do the DSP bot leave your voice channel',
-    level: 0,
+var prefix = config.settings.prefix,
+    commandName = 'leave';
+
+var help = `**${commandName.toUpperCase()}**
+_Makes the DSP-BOT leave your current voice channel._
+
+Usage:
+    ${prefix}${commandName}
+    ${prefix}${commandName} -h | --help
+
+Options:
+    -h --help   _Shows this screen_`;
+
+var commandProperties = {
+    name: commandName,
+    description: 'Do the DSP bot leave your voice channel',
+    help: help,
+    level: 3,
     fn: doLeave
-});
+};
 
-function doLeave(message) {
-    var client = message.client;
+var command = new Command(commandProperties);
+
+function doLeave(message, client) {
     var messageVoiceChannel = message.author.voiceChannel || {};
     if (client.voiceConnection &&
         client.voiceConnection.id === messageVoiceChannel.id) {
@@ -18,7 +33,6 @@ function doLeave(message) {
     } else {
         throw new Error('I\'m not in your voice channel!');
     }
-
 }
 
 module.exports = command;

@@ -1,16 +1,32 @@
 'use strict';
-var Command = require('../../lib/command.js');
+var Command = require('../../lib/command.js'),
+    config = require('../../config.json');
 
-var command = new Command({
-    name: 'greet',
-    description: 'Greet from DSP bot',
-    help: 'Get a cheerful handshake',
+var prefix = config.settings.prefix,
+    commandName = 'greet';
+
+var help = `**${commandName.toUpperCase()}**
+_Do the DSP-BOT greet you._
+
+Usage:
+    ${prefix}${commandName}
+    ${prefix}${commandName} -h | --help
+
+Options:
+    -h --help   _Shows this screen_`;
+
+var commandProperties = {
+    name: commandName,
+    description: 'Get a cheerful handshake',
+    help: help,
     level: 0,
     fn: doGreet
-});
+};
 
-function doGreet(message) {
-    message.client.reply(message, 'Greetings!');
+var command = new Command(commandProperties);
+
+function doGreet(message, client) {
+    client.reply(message, 'Greetings!');
 }
 
 module.exports = command;
