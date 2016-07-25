@@ -8,7 +8,7 @@
         "max-len": 0,
         "indent": [
             "error",
-            4
+            2
         ],
         "align-function-arguments": 0,
         "align-multiline-assignment": 0,
