@@ -30,17 +30,28 @@ var commandProperties = {
 var command = new Command(commandProperties);
 
 function doGreet(message, client, args) {
-  var anime;
-  anime = args.params[0];
-  anime = anime.split(" ").join("+");
+  var anime = "";
+  var link;
+
+  args.params.forEach(function(val, index) {
+    anime = anime + val.split(" ").join("+") + "+";
+  });
+
+  anime = anime.substring(0, anime.length - 1);
+
+  if (args.flags['horsubs'] || args.options['hs']) {
+    link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}+horrible+subs`;
+  } else {
+    link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`;
+  }
 
   if (args.flags['first'] || args.options['f']) {
-    request(`https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`, function(error, response, html) {
+    request(link, function(error, response, html) {
       var $ = cheerio.load(html);
       client.reply(message, "https:" + $(".tlistdownload a").attr("href"));
     });
   } else {
-    client.reply(message, `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`);
+    client.reply(message, link);
   }
 }
 
