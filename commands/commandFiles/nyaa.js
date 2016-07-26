@@ -68,6 +68,7 @@ function takeOptions(obj) {
 function doNyaa(message, client, args) {
   if (args.params.length > 0) {
     var anime = "";
+    var sorryMsg = "Lo siento, no he encontrado resultados :(";
     var link;
     var firstLink;
     var options = takeOptions(args.options);
@@ -97,7 +98,7 @@ function doNyaa(message, client, args) {
           // Se responde al usuario
           client.reply(message, `https:${firstLink}`);
         } else {
-          client.reply(message, "Lo siento, no he encontrado resultados :(");
+          client.reply(message, sorryMsg);
         }
       });
     } else if (options["first"]) {
@@ -109,7 +110,7 @@ function doNyaa(message, client, args) {
           // Se responde al usuario
           client.reply(message, `https:${firstLink}`);
         } else {
-          client.reply(message, "Lo siento, no he encontrado resultados :(");
+          client.reply(message, sorryMsg);
         }
       });
     } else if (options["data"]) {
@@ -124,7 +125,7 @@ function doNyaa(message, client, args) {
             client.reply(message, `**Nombre**: ${$(".viewtable .viewtorrentname")[0].children[0].data} | **Fecha**: ${$(".viewtable .vtop")[0].children[0].data}`);
           });
         } else {
-          client.reply(message, "Lo siento, no he encontrado resultados :(");
+          client.reply(message, sorryMsg);
         }
       });
     } else {
