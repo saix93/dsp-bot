@@ -58,7 +58,7 @@ function setLevelById(userId, level) {
     removeUserFromPermissions(userId);
     if (level < 0) {
         throw new Error(`Level must be a number between 0 and ${config.permissions.length + 1}`);
-    } else if (level === 0) {
+    } else if (level > 0) {
         config.permissions[level - 2].push(userId);
     }
 }
