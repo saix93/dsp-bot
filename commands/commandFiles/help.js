@@ -28,7 +28,7 @@ var command = new Command(commandProperties);
 
 function doHelp(message, client) {
     var permissionLevel = utils.getPermissionLevel(message.author.id);
-    var commands = require('../');
+    var commands = utils.sortProperties(require('../'));
     var msg = '\n';
     for (var cmd in commands) {
         var cmdProp = commands[cmd].properties;
