@@ -36,9 +36,11 @@ function takeOptions(obj) {
   var result = {};
   for (var p in obj) {
     if (obj.hasOwnProperty(p)) {
+      // Si está la opción 'f' (first)
       if (p.indexOf("f") !== -1 || p.indexOf("first") !== -1) {
         result["first"] = true;
       }
+      // Si está la opción 'hs' (horsubs)
       if (p.indexOf("hs") !== -1 || p.indexOf("horsubs") !== -1) {
         result["horsubs"] = true;
       }
@@ -50,28 +52,33 @@ function takeOptions(obj) {
 function doNyaa(message, client, args) {
   if (args.params.length > 0) {
     var anime = "";
-    var horsubs = "";
     var link;
     var options = takeOptions(args.options);
 
+    // Se concatenan todos los parámetros recibidos por la función con caracteres "+" para la query string
     args.params.forEach(function(val, index) {
       anime = anime + val.split(" ").join("+") + "+";
     });
 
     anime = anime.substring(0, anime.length - 1);
 
+    // Si se ha introducido la opción 'hs', se concatena la cadena para buscar en horrible subs en 1080p
     if (options["horsubs"]) {
-      horsubs = "+horrible+subs+1080";
+      anime = anime + "+horrible+subs+1080";
     }
 
-    link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}${horsubs}`;
+    // Se forma el link
+    link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`;
 
+    // Si se ha introducido la opción 'f', se hace una llamada get para recibir la página y buscar el enlace de descarga
     if (options["first"]) {
       request(link, function(error, response, html) {
         var $ = cheerio.load(html);
+        // Se responde al usuario
         client.reply(message, "https:" + $(".tlistdownload a").attr("href"));
       });
     } else {
+      // Se responde al usuario
       client.reply(message, link);
     }
   }
