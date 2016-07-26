@@ -1,6 +1,6 @@
 'use strict';
 var Command = require('../../lib/command.js'),
-    config = require('../../config.json'),
+    config = require('../../lib/ConfigManager.js').config,
     logger = require('../../lib/logger.js');
 
 var prefix = config.settings.prefix,

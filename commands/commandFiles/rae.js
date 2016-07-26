@@ -1,6 +1,6 @@
 'use strict';
 var Command = require('../../lib/command.js'),
-    config = require('../../config.json');
+    config = require('../../lib/ConfigManager.js').config;
 
 var cheerio = require('cheerio');
 var toMarkdown = require('to-markdown');
@@ -23,7 +23,7 @@ var commandProperties = {
   name: commandName,
   description: 'Search for word in RAE',
   help: help,
-  level: 0,
+  level: 2,
   fn: doRae
 };
 

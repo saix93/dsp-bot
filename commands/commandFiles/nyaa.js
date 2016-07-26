@@ -1,6 +1,6 @@
 'use strict';
 var Command = require('../../lib/command.js'),
-    config = require('../../config.json');
+    config = require('../../lib/ConfigManager.js').config;
 
 var cheerio = require('cheerio');
 var request = require('request');

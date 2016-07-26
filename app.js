@@ -1,15 +1,18 @@
 'use strict';
 process.title = 'DSP-BOT';
 
+var ConfigManager, config;
 try {
-    require('./config.json');
+    ConfigManager = require('./lib/ConfigManager.js');
+    ConfigManager.loadConfig();
+    ConfigManager.config.bot.email = 'mail';
+    config = ConfigManager.config;
 } catch (e) {
     console.log('Config file not found.');
     process.exit();
 }
 
 var Discord = require('discord.js'),
-    config = require('./config.json'),
     utils = require('./lib/utils.js'),
     logger = require('./lib/logger.js'),
     commands = require('./commands/'),
