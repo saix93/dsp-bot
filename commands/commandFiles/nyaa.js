@@ -72,6 +72,11 @@ function doNyaa(message, client, args) {
     var link;
     var firstLink;
     var options = takeOptions(args.options);
+    var flags = takeOptions(args.flags);
+
+    for (var attrname in flags) {
+      options[attrname] = flags[attrname];
+    }
 
     // Se concatenan todos los parámetros recibidos por la función con caracteres "+" para la query string
     args.params.forEach(function(val, index) {
