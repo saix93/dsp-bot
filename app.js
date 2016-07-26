@@ -5,10 +5,9 @@ var ConfigManager, config;
 try {
     ConfigManager = require('./lib/ConfigManager.js');
     ConfigManager.loadConfig();
-    ConfigManager.config.bot.email = 'mail';
     config = ConfigManager.config;
 } catch (e) {
-    console.log('Config file not found.');
+    console.log('Could not load config file:\n' + e.message);
     process.exit();
 }
 
@@ -17,6 +16,8 @@ var Discord = require('discord.js'),
     logger = require('./lib/logger.js'),
     commands = require('./commands/'),
     os = require('os');
+
+ConfigManager.setLogger(logger);
 
 var bot = new Discord.Client();
 
