@@ -17,9 +17,11 @@ Usage:
 
 Options:
     -h --help   _Shows this screen_
-    -f --first  _Returns the first download link found_
-    -hs --horsubs  _Returns the first download link found of horrible subs in 1080p_
-    -fhs --firsthorsubs  _Returns the first download link found of horrible subs in 1080p_`;
+    -da --data  _Returns the data of the first link found of horrible subs in 1080p_
+    -f --first  _Returns the first page link found_
+    -dl --download  _Returns the first download link found_
+    -hs --horsubs  _Returns the link of a query with the params plus horrible+subs+1080_
+    -b --best  _Returns the first download link found of horrible subs in 1080p_`;
 
 var commandProperties = {
   name: commandName,
@@ -40,9 +42,23 @@ function takeOptions(obj) {
       if (p.indexOf("f") !== -1 || p.indexOf("first") !== -1) {
         result["first"] = true;
       }
+      // Si está la opción 'dl' (download)
+      if (p.indexOf("dl") !== -1 || p.indexOf("download") !== -1) {
+        result["download"] = true;
+      }
+      // Si está la opción 'da' (data)
+      if (p.indexOf("da") !== -1 || p.indexOf("data") !== -1) {
+        result["data"] = true;
+        result["horsubs"] = true;
+      }
       // Si está la opción 'hs' (horsubs)
       if (p.indexOf("hs") !== -1 || p.indexOf("horsubs") !== -1) {
         result["horsubs"] = true;
+      }
+      // Si está la opción 'b' (best) (dl+hs)
+      if (p.indexOf("b") !== -1 || p.indexOf("best") !== -1) {
+        result["horsubs"] = true;
+        result["download"] = true;
       }
     }
   }
@@ -53,6 +69,7 @@ function doNyaa(message, client, args) {
   if (args.params.length > 0) {
     var anime = "";
     var link;
+    var firstLink;
     var options = takeOptions(args.options);
 
     // Se concatenan todos los parámetros recibidos por la función con caracteres "+" para la query string
@@ -70,12 +87,45 @@ function doNyaa(message, client, args) {
     // Se forma el link
     link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`;
 
-    // Si se ha introducido la opción 'f', se hace una llamada get para recibir la página y buscar el enlace de descarga
-    if (options["first"]) {
+    // Si se ha introducido la opción 'dl' o 'b', se hace una llamada get para recibir la página y buscar el enlace de descarga
+    if (options["download"]) {
       request(link, function(error, response, html) {
         var $ = cheerio.load(html);
-        // Se responde al usuario
-        client.reply(message, "https:" + $(".tlistdownload a").attr("href"));
+        firstLink = $(".tlistdownload a").attr("href");
+        if (firstLink && firstLink !== "undefined") {
+          firstLink = firstLink.split("view").join("download");
+          // Se responde al usuario
+          client.reply(message, `https:${firstLink}`);
+        } else {
+          client.reply(message, "Lo siento, no he encontrado resultados :(");
+        }
+      });
+    } else if (options["first"]) {
+      request(link, function(error, response, html) {
+        var $ = cheerio.load(html);
+        firstLink = $(".tlistdownload a").attr("href");
+        if (firstLink && firstLink !== "undefined") {
+          firstLink = firstLink.split("download").join("view");
+          // Se responde al usuario
+          client.reply(message, `https:${firstLink}`);
+        } else {
+          client.reply(message, "Lo siento, no he encontrado resultados :(");
+        }
+      });
+    } else if (options["data"]) {
+      request(link, function(error, response, html) {
+        var $ = cheerio.load(html);
+        firstLink = $(".tlistdownload a").attr("href");
+        if (firstLink && firstLink !== "undefined") {
+          firstLink = firstLink.split("download").join("view");
+          request(`https:${firstLink}`, function(error, response, html) {
+            $ = cheerio.load(html);
+            // Se responde al usuario
+            client.reply(message, `**Nombre**: ${$(".viewtable .viewtorrentname")[0].children[0].data} | **Fecha**: ${$(".viewtable .vtop")[0].children[0].data}`);
+          });
+        } else {
+          client.reply(message, "Lo siento, no he encontrado resultados :(");
+        }
       });
     } else {
       // Se responde al usuario
