@@ -3,6 +3,7 @@ var Command = require('../../lib/command.js'),
     config = require('../../lib/ConfigManager.js').config;
 
 var request = require('request');
+var wget = require('node-wget');
 
 var prefix = config.settings.prefix,
     commandName = 'say';
@@ -29,7 +30,7 @@ var command = new Command(commandProperties);
 
 function doSay(message, client, args) {
   if (args.params.length > 0) {
-    var messageToTranslate;
+    var messageToTranslate = "";
     var url = "https://translate.google.com/translate_tts?ie=UTF-8&q=REPLACEME&tl=es-ES&client=tw-ob";
 
     args.params.forEach(function(val, index) {
@@ -40,12 +41,14 @@ function doSay(message, client, args) {
 
     url = url.replace("REPLACEME", messageToTranslate);
 
-    request(url, function(error, response, html) {
+    wget({url: url, dest: 'speak.mp3'}, callback);
+
+    function callback() {
       if (client.internal.voiceConnection) {
         client.voiceConnection.setSpeaking(true);
-        client.voiceConnection.playRawStream(html, { volume: 0.25 });
+        client.voiceConnection.playFile('speak.mp3', { volume: 0.25 });
       }
-    })
+    }
   }
 }
 
