@@ -23,7 +23,7 @@ var commandProperties = {
   name: commandName,
   description: 'Search for word in RAE',
   help: help,
-  level: 2,
+  level: 0,
   fn: doRae
 };
 
