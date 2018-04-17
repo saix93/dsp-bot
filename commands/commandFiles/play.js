@@ -27,9 +27,10 @@ var command = new Command(commandProperties);
 
 function doPlay(message, client, args) {
   if (args.params.length > 0) {
-    if (client.internal.voiceConnection) {
-      client.voiceConnection.setSpeaking(true);
-      client.voiceConnection.playFile(`${args.params[0]}.mp3`, { volume: 0.25 });
+    const connection = client.voiceConnections.first();
+    
+    if (connection) {
+      connection.playFile(`.\\Audio\\${args.params.join(" ")}.mp3`);
     }
   }
 }

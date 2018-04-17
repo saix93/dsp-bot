@@ -51,7 +51,7 @@ function doGrant(message, client, args) {
         throw new Error(`Level ${level} doesn\'t exists`);
     }
     setLevelById(id, level);
-    client.reply(message, `User ${user.username} granted level ${level}`);
+    message.channel.send(`User ${user.username} granted level ${level}`);
 }
 
 function setLevelById(userId, level) {

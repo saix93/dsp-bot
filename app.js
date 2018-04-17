@@ -21,10 +21,12 @@ ConfigManager.setLogger(logger);
 
 var bot = new Discord.Client();
 
+utils.setClient(bot);
+
 initialize();
 
 function initialize() {
-    bot.loginWithToken(config.bot.token);
+    bot.login(config.bot.token);
     setListeners();
 }
 
@@ -34,7 +36,7 @@ function setListeners() {
 }
 
 function onReady() {
-    bot.setPlayingGame(os.hostname());
+    bot.user.setPresence({ game: { name: `Hosting: ${os.hostname()}`} });
     logger.info('DSP BOT: All packed up and ready to go!');
 }
 
@@ -49,11 +51,11 @@ function onMessage(message) {
                 commands[command].execute(message, params);
             } catch (error) {
                 logger.warn(error.toString());
-                bot.reply(message, error.toString());
+                message.channel.send(error.toString());
             }
         } else {
             logger.warn(`User ${message.author.username} tried to invoke undefined command ${command}`);
-            bot.reply(message, `_${command}_ is not a command!`);
+            message.channel.send(`_${command}_ is not a command!`);
         }
     }
 }

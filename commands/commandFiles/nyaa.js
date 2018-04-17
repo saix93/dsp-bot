@@ -101,9 +101,9 @@ function doNyaa(message, client, args) {
         if (firstLink && firstLink !== "undefined") {
           firstLink = firstLink.split("view").join("download");
           // Se responde al usuario
-          client.reply(message, `https:${firstLink}`);
+          message.channel.send(`https:${firstLink}`);
         } else {
-          client.reply(message, sorryMsg);
+          message.channel.send(sorryMsg);
         }
       });
     } else if (options["first"]) {
@@ -113,9 +113,9 @@ function doNyaa(message, client, args) {
         if (firstLink && firstLink !== "undefined") {
           firstLink = firstLink.split("download").join("view");
           // Se responde al usuario
-          client.reply(message, `https:${firstLink}`);
+          message.channel.send(`https:${firstLink}`);
         } else {
-          client.reply(message, sorryMsg);
+          message.channel.send(sorryMsg);
         }
       });
     } else if (options["data"]) {
@@ -127,15 +127,15 @@ function doNyaa(message, client, args) {
           request(`https:${firstLink}`, function(error, response, html) {
             $ = cheerio.load(html);
             // Se responde al usuario
-            client.reply(message, `**Nombre**: ${$(".viewtable .viewtorrentname")[0].children[0].data} | **Fecha**: ${$(".viewtable .vtop")[0].children[0].data}`);
+            message.channel.send(`**Nombre**: ${$(".viewtable .viewtorrentname")[0].children[0].data} | **Fecha**: ${$(".viewtable .vtop")[0].children[0].data}`);
           });
         } else {
-          client.reply(message, sorryMsg);
+          message.channel.send(sorryMsg);
         }
       });
     } else {
       // Se responde al usuario
-      client.reply(message, link);
+      message.channel.send(link);
     }
   }
 }

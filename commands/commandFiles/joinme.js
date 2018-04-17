@@ -26,8 +26,11 @@ var commandProperties = {
 var command = new Command(commandProperties);
 
 function doJoinme(message, client) {
-    var voiceChannel = message.author.voiceChannel;
-    client.joinVoiceChannel(voiceChannel);
+    const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
 }
 
 module.exports = command;

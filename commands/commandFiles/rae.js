@@ -35,26 +35,32 @@ function doRae(message, client, args) {
 
     // Llamada a la url del parámetro indicado
     request(url, function(error, response, html) {
-      url = url.replace("srv/search", "");
+      console.log(html);
       var $ = cheerio.load(html);
+      console.log("--------------------------------------");
+      console.log($("body").html());
 
       // Comprueba si hay más de una palabra como resultado
       if ($("ul").length > 0) {
-        client.reply(message, `Lo siento pero vas a tener que utilizar el enlace: ${url}`);
+        message.channel.send(`Lo siento pero vas a tener que utilizar el enlace: ${url}`);
       } else {
         // Añade negrita a la palabra
+        // console.log($(".f"));
         if ($(".f")[0] && $(".f")[0].children[0]) {
           var word = $(".f")[0].children[0].data;
           html = html.replace(word, `**${word}**`);
-        }
-        var text = $(`<div>${toMarkdown(html)}</div>`).text();
 
-        // Si el texto tiene más de 500 caracteres, se corta y se introduce el link al final
-        if (text.length > 500) {
-          text = text.substr(0, 500) + "...\n\n**Más: **" + url;
-          client.reply(message, text);
+          var text = $(`<div>${toMarkdown(html)}</div>`).text();
+
+          // Si el texto tiene más de 500 caracteres, se corta y se introduce el link al final
+          if (text.length > 500) {
+            text = text.substr(0, 500) + "...\n\n**Más: **" + url;
+            message.channel.send(text);
+          } else {
+            message.channel.send(`Aquí está tu resultado: ${text}`);
+          }
         } else {
-          client.reply(message, text);
+          message.channel.send(`Lo siento pero vas a tener que utilizar el enlace: ${url}`);
         }
       }
     });

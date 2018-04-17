@@ -45,7 +45,7 @@ function doBlock(message, client, args) {
     if (args.flags['clear'] || args.options['c']) {
         unsetBlock(blockedChannel.name);
         logger.info(`User "${message.author.name}" unblocked channel "${blockedChannel.name}"`);
-        client.reply(message, `Channel "${blockedChannel.name}" unblocked`);
+        message.channel.send(`Channel "${blockedChannel.name}" unblocked`);
         return;
     }
 
@@ -90,7 +90,7 @@ function doBlock(message, client, args) {
     blockedChannels[blockedChannel.name] = new BlockedChannel(blockedChannel, game, blockChannelFn);
 
     logger.info(`User "${message.author.name}" blocked channel "${blockedChannel.name}" for "${game}" only`);
-    client.reply(message, `Channel "${blockedChannel.name}" blocked for "${game}" only`);
+    message.channel.send(`Channel "${blockedChannel.name}" blocked for "${game}" only`);
 
     function setKickTimeout(user) {
         logger.info(`User "${user.name}" warned to play "${game}" or leave channel "${blockedChannel.name}"`);

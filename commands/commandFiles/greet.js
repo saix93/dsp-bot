@@ -26,7 +26,7 @@ var commandProperties = {
 var command = new Command(commandProperties);
 
 function doGreet(message, client) {
-    client.reply(message, 'Greetings!');
+  message.channel.send('Greetings!');
 }
 
 module.exports = command;

@@ -36,7 +36,7 @@ function doHelp(message, client) {
             msg += `**${cmdProp.name}**: ${cmdProp.description}\n`;
         }
     }
-    client.reply(message, msg);
+    message.channel.send(msg);
 }
 
 module.exports = command;
