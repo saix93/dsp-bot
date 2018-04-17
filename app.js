@@ -21,8 +21,6 @@ ConfigManager.setLogger(logger);
 
 var bot = new Discord.Client();
 
-utils.setClient(bot);
-
 initialize();
 
 function initialize() {
