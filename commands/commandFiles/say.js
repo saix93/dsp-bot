@@ -40,7 +40,7 @@ function doSay(message, client, args) {
 
     messageToTranslate = messageToTranslate.substring(0, messageToTranslate.length - 1);
 
-    url = url.replace("REPLACEME", messageToTranslate);
+    url = url.replace("REPLACEME", encodeURI(messageToTranslate));
 
     wget({url: url, dest: `.\\Audio\\${fileName}.mp3`}, callback);
 
