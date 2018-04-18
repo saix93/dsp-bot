@@ -9,6 +9,7 @@
             "textChannel": "ID FOR DEFAULT TEXT CHANNEL"
         }
     },
+    "maxPermissionLevel": 3,
     "permissions": [
         ["USER ID'S FOR", "BASIC COMMANDS"],
         ["USER ID'S FOR", "ADVANCED COMMANDS"],

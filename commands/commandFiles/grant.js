@@ -47,30 +47,34 @@ function doGrant(message, client, args) {
     if (!user) {
         throw new Error(`User with id ${id} not found`);
     }
-    if (level > config.permissions.length + 1) {
-        throw new Error(`Level ${level} doesn\'t exists`);
+    if (level > config.maxPermissionLevel) {
+        throw new Error(`Level ${level} doesn\'t exist`);
     }
     setLevelById(id, level);
     message.channel.send(`User ${user.username} granted level ${level}`);
+    console.log(config.permissions);
 }
 
 function setLevelById(userId, level) {
-    removeUserFromPermissions(userId);
-    if (level < 0) {
-        throw new Error(`Level must be a number between 0 and ${config.permissions.length + 1}`);
-    } else if (level > 0) {
-        config.permissions[level - 2].push(userId);
-    }
-}
+    if (level < 0 || level > config.maxPermissionLevel) {
+        throw new Error(`Level must be a number between 0 and ${config.maxPermissionLevel}`);
+    } else {
+        var found = false;
 
-function removeUserFromPermissions(uid) {
-    config.permissions.forEach(function(arr) {
-        var i = arr.indexOf(uid);
-        while (arr.indexOf(uid) != -1) {
-            arr.splice(i, 1);
-            i = arr.indexOf(uid);
+        for (var i = 0; i < config.permissions.length; i++) {
+            found = config.permissions[i].find(function(id) {
+                return id === userId;
+            });
+            if (found) {
+                config.permissions[i][1] = level;
+                break;
+            }
         }
-    });
+
+        if (!found) {
+            config.permissions.push([userId, level]);
+        }
+    }
 }
 
 function isPositiveInteger(s) {
