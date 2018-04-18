@@ -52,7 +52,6 @@ function doGrant(message, client, args) {
     }
     setLevelById(id, level);
     message.channel.send(`User ${user.username} granted level ${level}`);
-    console.log(config.permissions);
 }
 
 function setLevelById(userId, level) {
