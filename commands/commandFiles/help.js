@@ -30,6 +30,7 @@ function doHelp(message, client) {
     var permissionLevel = utils.getPermissionLevel(message.author.id);
     var commands = utils.sortProperties(require('../'));
     var msg = '\n';
+    msg += "**These are the commands you are allowed to use:**\n\n";
     for (var cmd in commands) {
         var cmdProp = commands[cmd].properties;
         if (cmdProp.level <= permissionLevel) {
