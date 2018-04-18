@@ -22,6 +22,7 @@
     "express": "^4.14.0",
     "ffmpeg": "0.0.4",
     "log4js": "^0.6.37",
+    "mp3-duration": "^1.1.0",
     "node-wget": "^0.4.2",
     "opusscript": "0.0.6",
     "q": "^1.4.1",
