@@ -27,6 +27,7 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
+var fileName = "google speak";
 
 function doSay(message, client, args) {
   if (args.params.length > 0) {
@@ -41,12 +42,13 @@ function doSay(message, client, args) {
 
     url = url.replace("REPLACEME", messageToTranslate);
 
-    wget({url: url, dest: 'speak.mp3'}, callback);
+    wget({url: url, dest: `.\\Audio\\${fileName}.mp3`}, callback);
 
     function callback() {
-      if (client.internal.voiceConnection) {
-        client.voiceConnection.setSpeaking(true);
-        client.voiceConnection.playFile('speak.mp3', { volume: 0.25 });
+      const connection = client.voiceConnections.first();
+
+      if (connection) {
+        connection.playFile(`.\\Audio\\${fileName}.mp3`);
       }
     }
   }
