@@ -49,6 +49,8 @@ function doSay(message, client, args) {
 
       if (connection) {
         connection.playFile(`.\\Audio\\${fileName}.mp3`);
+      } else {
+        throw new Error(`I am not connected to any voice channel! Use ${prefix}joinme first!`);
       }
     }
   }
