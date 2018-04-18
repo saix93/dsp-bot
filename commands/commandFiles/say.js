@@ -27,7 +27,7 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
-var fileName = "google speak";
+var fileName = "__GoogleSpeak";
 
 function doSay(message, client, args) {
   if (args.params.length > 0) {
