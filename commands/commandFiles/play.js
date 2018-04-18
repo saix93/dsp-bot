@@ -1,7 +1,8 @@
 'use strict';
 var Command = require('../../lib/command.js'),
     config = require('../../lib/ConfigManager.js').config,
-    fs = require('fs');
+    fs = require('fs'),
+    mp3Duration = require("mp3-duration");
 
 var prefix = config.settings.prefix,
     commandName = 'play';
@@ -35,6 +36,10 @@ function doPlay(message, client, args, options) {
     fs.readdir('.\\Audio', function (err, files) {
       for (var i =  0; i < files.length; i++) {
         if (i != files.length - 1) {
+          // mp3Duration(`.\\Audio\\${files[i]}`, function (err, duration) { // Bug, ya que la función es asíncrona y está dentro de un for
+          //   if (err) return console.log(err.message);
+          //   msg += `*- ${files[i].slice(0, -4)} (${duration})*\n`;
+          // });
           msg += `*- ${files[i].slice(0, -4)}*\n`;
         }
       }
@@ -52,7 +57,7 @@ function doPlay(message, client, args, options) {
       var path = `.\\Audio\\${args.params.join(" ")}.mp3`;
       if (fs.existsSync(path)) {
         connection.playFile(path);
-        message.channel.send('Playing!');
+        message.channel.send(`Playing ${args.params.join(" ")}!`);
       } else {
         throw new Error('The file doesn\' exist');
       }
