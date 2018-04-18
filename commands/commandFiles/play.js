@@ -30,11 +30,13 @@ var command = new Command(commandProperties);
 
 function doPlay(message, client, args, options) {
   if (options['l'] || options['list']) {
-    var msg = "**List of stored mp3 files:**\n";
+    var msg = "**List of stored mp3 files:**\n\n";
 
     fs.readdir('.\\Audio', function (err, files) {
       for (var i =  0; i < files.length; i++) {
-        msg += `*- ${files[i].slice(0, -4)}*\n`;
+        if (i != files.length - 1) {
+          msg += `*- ${files[i].slice(0, -4)}*\n`;
+        }
       }
 
       message.channel.send(msg);
