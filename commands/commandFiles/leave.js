@@ -26,10 +26,11 @@ var commandProperties = {
 var command = new Command(commandProperties);
 
 function doLeave(message, client) {
-    var messageVoiceChannel = message.author.voiceChannel || {};
-    if (client.voiceConnection &&
-        client.voiceConnection.id === messageVoiceChannel.id) {
-        client.voiceConnection.destroy();
+    const messageVoiceChannel = message.member.voiceChannel;
+    const connection = client.voiceConnections.first();
+    
+    if (connection && connection.channel.id === messageVoiceChannel.id) {
+        connection.disconnect();
     } else {
         throw new Error('I\'m not in your voice channel!');
     }
