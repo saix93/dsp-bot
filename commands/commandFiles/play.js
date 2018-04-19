@@ -57,7 +57,11 @@ function doPlay(message, client, args, options) {
       var path = `.\\Audio\\${args.params.join(" ")}.mp3`;
       if (fs.existsSync(path)) {
         connection.playFile(path);
-        message.channel.send(`Playing ${args.params.join(" ")}!`);
+        mp3Duration(`.\\Audio\\${args.params.join(" ")}.mp3`, function (err, duration) {
+          if (err) return console.log(err.message);
+          duration = String(duration / 60).substr(0, 4).replace('.', ':') + 'm';
+          message.channel.send(`Playing ${args.params.join(" ")} (${duration})!`);
+        });
       } else {
         throw new Error('The file doesn\' exist');
       }
