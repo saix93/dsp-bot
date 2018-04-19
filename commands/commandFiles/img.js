@@ -31,7 +31,8 @@ var command = new Command(commandProperties);
 const supportedExtensions = [
   'jpg',
   'jpeg',
-  'png'
+  'png',
+  'gif'
 ];
 
 function doImg(message, client, args, options) {
