@@ -34,7 +34,8 @@ function setListeners() {
 }
 
 function onReady() {
-    bot.user.setPresence({ game: { name: `Hosting: ${os.hostname()}`} });
+    //bot.user.setPresence({ game: { name: `Hosting: ${os.hostname()}`} });
+    bot.user.setPresence({ game: { name: `${config.settings.prefix}help`} });
     logger.info('DSP BOT: All packed up and ready to go!');
 }
 
