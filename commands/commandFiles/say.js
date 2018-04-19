@@ -42,13 +42,13 @@ function doSay(message, client, args) {
 
     url = url.replace("REPLACEME", encodeURI(messageToTranslate));
 
-    wget({url: url, dest: `.\\Audio\\${fileName}.mp3`}, callback);
+    wget({url: url, dest: `.\\Content\\Audio\\${fileName}.mp3`}, callback);
 
     function callback() {
       const connection = client.voiceConnections.first();
 
       if (connection) {
-        connection.playFile(`.\\Audio\\${fileName}.mp3`);
+        connection.playFile(`.\\Content\\Audio\\${fileName}.mp3`);
       } else {
         throw new Error(`I am not connected to any voice channel! Use ${prefix}joinme first!`);
       }
