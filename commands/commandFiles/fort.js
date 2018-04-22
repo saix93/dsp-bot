@@ -49,7 +49,14 @@ const locationList = [
   'Wailing Woods',
   'Prison',
   'Containers',
-  'Karts Circuit'
+  'Karts Circuit',
+  'Wooden Chair',
+  'Football Stadium',
+  'Caravan Park',
+  'Motel',
+  'South Factory',
+  'Dusty Factory',
+  'Ruins'
 ];
 
 function doFort(message, client, args, options) {
