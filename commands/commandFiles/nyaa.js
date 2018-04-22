@@ -91,7 +91,7 @@ function doNyaa(message, client, args) {
     }
 
     // Se forma el link
-    link = `https://www.nyaa.se/?page=search&cats=0_0&filter=0&term=${anime}`;
+    link = `https://www.nyaa.si/?page=search&cats=0_0&filter=0&term=${anime}`;
 
     // Si se ha introducido la opción 'dl' o 'b', se hace una llamada get para recibir la página y buscar el enlace de descarga
     if (options["download"]) {
