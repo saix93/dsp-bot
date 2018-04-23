@@ -26,7 +26,7 @@ initialize();
 
 function initialize() {
     bot.login(config.bot.token);
-    server.start(commands);
+    server.start(commands, config);
     setListeners();
 }
 
