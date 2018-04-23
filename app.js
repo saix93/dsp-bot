@@ -14,6 +14,7 @@ try {
 var Discord = require('discord.js'),
     utils = require('./lib/utils.js'),
     logger = require('./lib/logger.js'),
+    server = require('./server/server.js'),
     commands = require('./commands/'),
     os = require('os');
 
@@ -25,6 +26,7 @@ initialize();
 
 function initialize() {
     bot.login(config.bot.token);
+    server.start(commands);
     setListeners();
 }
 
