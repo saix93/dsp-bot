@@ -4,6 +4,8 @@ var Command = require('../../lib/command.js'),
     fs = require('fs'),
     mp3Duration = require("mp3-duration");
 
+var joinme = require('./joinme.js');
+
 var prefix = config.settings.prefix,
     commandName = 'play';
 
@@ -49,7 +51,13 @@ function doPlay(message, client, args, options) {
 
     return;
   }
+  
+  // joinme.properties.fn(message, client, args, options);
 
+  playFile(message, client, args, options);
+}
+
+function playFile(message, client, args, options) {
   if (args.params.length > 0) {
     const connection = client.voiceConnections.first();
     
@@ -63,7 +71,7 @@ function doPlay(message, client, args, options) {
           message.channel.send(`Playing ${args.params.join(" ")} (${duration})!`);
         });
       } else {
-        throw new Error('The file doesn\' exist');
+        throw new Error('The file doesn\'t exist');
       }
     } else {
       throw new Error(`I am not connected to any voice channel! Use ${prefix}joinme first!`);
