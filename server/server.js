@@ -4,15 +4,19 @@ var app 		    = express();
 
 var webServer = http.createServer(app).listen(80);
 
-function start(cmdList) {
+function start() {
   app.use('/', express.static('server/public'));
 
-  startServices(cmdList);
+  startServices.apply(null, arguments);
 }
 
-function startServices(cmdList) {
+function startServices(cmdList, config) {
   app.get('/commandList', function(req, res) {
     res.send(cmdList);
+  });
+
+  app.get('/config', function(req, res) {
+    res.send(config);
   });
 }
 
