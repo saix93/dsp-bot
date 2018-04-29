@@ -1,7 +1,8 @@
 'use strict';
 var Command = require('../../lib/command.js'),
     config = require('../../lib/ConfigManager.js').config,
-    utils = require('../../lib/utils.js');
+    utils = require('../../lib/utils.js'),
+    logger = require('../../lib/logger.js');
 
 var request = require('request');
 var wget = require('node-wget');
@@ -44,6 +45,7 @@ function doSay(message, client, args, options) {
     }
     
     var messageToTranslate = "";
+    const connection = client.voiceConnections.first();
 
     args.params.forEach(function(val, index) {
       messageToTranslate +=  val.split(" ").join("+") + "+";
@@ -56,12 +58,13 @@ function doSay(message, client, args, options) {
     wget({url: url, dest: `.\\Content\\Audio\\${fileName}.mp3`}, callback);
 
     function callback() {
-      const connection = client.voiceConnections.first();
-
       if (connection) {
         connection.playFile(`.\\Content\\Audio\\${fileName}.mp3`);
+        message.channel.send(`Im on it!`);
       } else {
-        throw new Error(`I am not connected to any voice channel! Use ${prefix}joinme first!`);
+        logger.warn(`Error: I am not connected to any voice channel! Use ${prefix}joinme first!`);
+        message.channel.send(`Error: I am not connected to any voice channel! Use ${prefix}joinme first!`);
+        // throw new Error(`I am not connected to any voice channel! Use ${prefix}joinme first!`); ??? Crashea el bot en lugar de controlar la excepción como hace el comando play
       }
     }
   }
