@@ -27,7 +27,6 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
-var path = "content/";
 
 const audioExtensions = [
   'mp3'
@@ -46,11 +45,12 @@ function doUpload(message, client, args, options) {
     var fileName = link.split("/")[link.split("/").length - 1].split(".");
     var name = args.params[1] ? args.params[1] : fileName[0];
     var extension = fileName[1];
+    var path = "content";
 
     if (audioExtensions.includes(extension)) {
-      path += 'audio/';
+      path += '/audio';
     } else if (imageExtensions.includes(extension)) {
-      path += 'images/';
+      path += '/images';
     } else {
       throw new Error('Unknown file extension!');
     }
@@ -59,7 +59,7 @@ function doUpload(message, client, args, options) {
     console.log(doingString);
     message.channel.send(doingString);
 
-    download(link, `${name}.${extension}`, function () {
+    download(link, `${path}/${name}.${extension}`, function () {
       var doneString = `File: ${name}.${extension} uploaded!`;
       console.log(doneString);
       message.channel.send(doneString);
@@ -74,7 +74,7 @@ function download(uri, filename, callback){
     console.log('content-type:', res.headers['content-type']);
     console.log('content-length:', res.headers['content-length']);
 
-    request(uri).pipe(fs.createWriteStream(path + filename)).on('close', callback);
+    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
   });
 };
 
