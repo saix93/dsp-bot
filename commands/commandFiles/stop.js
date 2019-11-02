@@ -20,14 +20,13 @@ var commandProperties = {
     description: 'Do the DSP bot stop the current audio',
     help: help,
     level: 0,
-    fn: doLeave
+    fn: doStop
 };
 
 var command = new Command(commandProperties);
 
-function doLeave(message, client) {
+function doStop(message, client) {
     const messageVoiceChannel = message.member.voiceChannel;
-    const connection = client.voiceConnections.first();
     
     if (!messageVoiceChannel) {
         throw new Error('I\'m not in your voice channel!');
