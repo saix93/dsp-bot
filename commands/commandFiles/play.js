@@ -64,7 +64,7 @@ function playFile(message, client, args, options) {
     if (connection) {
       var path = `./Content/Audio/${args.params.join(" ")}.mp3`;
       if (fs.existsSync(path)) {
-        connection.playFile(path);
+        client.currentAudio = connection.playFile(path);
         mp3Duration(`./Content/Audio/${args.params.join(" ")}.mp3`, function (err, duration) {
           if (err) return console.log(err.message);
           duration = String(duration / 60).substr(0, 4).replace('.', ':') + 'm';
