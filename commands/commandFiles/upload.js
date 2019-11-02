@@ -49,9 +49,10 @@ function doUpload(message, client, args, options) {
 
     if (audioExtensions.includes(extension)) {
       path += 'audio/';
-    }
-    if (imageExtensions.includes(extension)) {
-      path += 'image/';
+    } else if (imageExtensions.includes(extension)) {
+      path += 'images/';
+    } else {
+      throw new Error('Unknown file extension!');
     }
 
     var doingString = `Uploading file: ${name}.${extension}...`;
