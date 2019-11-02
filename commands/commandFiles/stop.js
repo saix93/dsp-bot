@@ -34,6 +34,8 @@ function doLeave(message, client) {
     } else {
         if (client.currentAudio != null) {
             client.currentAudio.end();
+        } else {
+          throw new Error('I\'m not playing any audio!');
         }
     }
 }
