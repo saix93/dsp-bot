@@ -94,6 +94,7 @@ function renderFilesList(message) {
     var files = fs.readdirSync(`${basePath}/${folders[i]}`);
 
     msg += '```css\n';
+    if (files.length == 0) msg += '...';
     for (var j = 0; j < files.length; j++) {
       msg += `- ${files[j]}\n`;
     }

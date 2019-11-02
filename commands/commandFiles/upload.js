@@ -52,7 +52,7 @@ function doUpload(message, client, args, options) {
     } else if (imageExtensions.includes(extension)) {
       path += '/images';
     } else {
-      throw new Error('Unknown file extension!');
+      path += '/other';
     }
 
     var doingString = `Uploading file: ${name}.${extension}...`;
