@@ -1,7 +1,6 @@
 'use strict';
 var Command = require('../../lib/command.js'),
     config = require('../../lib/ConfigManager.js').config,
-    find = require('find'),
     fs = require('fs');
 
 var prefix = config.settings.prefix,
