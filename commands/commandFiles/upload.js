@@ -27,7 +27,18 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
-var path = "content";
+var path = "content/";
+
+const audioExtensions = [
+  'mp3'
+]
+
+const imageExtensions = [
+  'jpg',
+  'jpeg',
+  'png',
+  'gif'
+]
 
 function doUpload(message, client, args, options) {
   if (args.params.length > 0) {
@@ -35,6 +46,13 @@ function doUpload(message, client, args, options) {
     var fileName = link.split("/")[link.split("/").length - 1].split(".");
     var name = args.params[1] ? args.params[1] : fileName[0];
     var extension = fileName[1];
+
+    if (audioExtensions.includes(extension)) {
+      path += 'audio/';
+    }
+    if (imageExtensions.includes(extension)) {
+      path += 'image/';
+    }
 
     var doingString = `Uploading file: ${name}.${extension}...`;
     console.log(doingString);
