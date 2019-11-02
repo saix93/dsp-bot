@@ -42,7 +42,7 @@ const imageExtensions = [
 function doUpload(message, client, args, options) {
   if (args.params.length > 0) {
     var link = args.params[0];
-    var fileName = link.split("/")[link.split("/").length - 1].split(".");
+    var fileName = link.split("/")[link.split("/").length - 1].split("?")[0].split(".");
     var name = args.params[1] ? args.params[1] : fileName[0];
     var extension = fileName[1];
     var path = "content";
