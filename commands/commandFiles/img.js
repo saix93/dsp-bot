@@ -39,7 +39,7 @@ function doImg(message, client, args, options) {
   if (options['l'] || options['list']) {
     var msg = "**List of available images:**\n\n";
 
-    fs.readdir('.\\Content\\Images', function (err, files) {
+    fs.readdir('./Content/Images', function (err, files) {
       for (var i =  0; i < files.length; i++) {
         msg += `*- ${files[i].slice(0, -4)}*\n`;
       }
@@ -52,7 +52,7 @@ function doImg(message, client, args, options) {
 
   var imgName = args.params.join(" ");
 
-  var path = `.\\Content\\Images\\${args.params.join(" ")}`;
+  var path = `./Content/Images/${args.params.join(" ")}`;
   var found = false;
   var fileExtension = '';
 

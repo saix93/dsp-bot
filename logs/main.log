@@ -1,0 +1,562 @@
+[2018-12-24 00:59:39.635] [DEBUG] main - Command "block" loaded
+[2018-12-24 00:59:39.651] [DEBUG] main - Command "fort" loaded
+[2018-12-24 00:59:39.656] [DEBUG] main - Command "grant" loaded
+[2018-12-24 00:59:39.662] [DEBUG] main - Command "greet" loaded
+[2018-12-24 00:59:39.668] [DEBUG] main - Command "help" loaded
+[2018-12-24 00:59:39.674] [DEBUG] main - Command "img" loaded
+[2018-12-24 00:59:39.679] [DEBUG] main - Command "joinme" loaded
+[2018-12-24 00:59:39.686] [DEBUG] main - Command "leave" loaded
+[2018-12-24 00:59:41.382] [DEBUG] main - Command "nyaa" loaded
+[2018-12-24 00:59:41.773] [DEBUG] main - Command "play" loaded
+[2018-12-24 00:59:44.788] [DEBUG] main - Command "rae" loaded
+[2018-12-24 00:59:45.143] [DEBUG] main - Command "say" loaded
+[2018-12-24 00:59:46.348] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-24 00:59:56.123] [DEBUG] main - Command "help" executed by "Saix93" with args ""
+[2018-12-24 01:00:23.060] [DEBUG] main - Command "rae" executed by "Saix93" with args "ola"
+[2018-12-24 01:00:41.176] [DEBUG] main - Command "greet" executed by "Saix93" with args ""
+[2018-12-24 01:00:47.534] [WARN] main - User Saix93 tried to invoke undefined command fornt
+[2018-12-24 01:00:50.128] [DEBUG] main - Command "fort" executed by "Saix93" with args ""
+[2018-12-24 01:01:04.552] [DEBUG] main - Command "nyaa" executed by "Saix93" with args "ansatsu"
+[2018-12-24 01:01:23.652] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:01:33.405] [DEBUG] main - Command "rae" executed by "Saix93" with args "asd"
+[2018-12-24 01:02:58.684] [DEBUG] main - Command "nyaa" executed by "Saix93" with args "-help"
+[2018-12-24 01:03:10.085] [DEBUG] main - Command "help" executed by "Saix93" with args "nyaa"
+[2018-12-24 01:03:14.700] [DEBUG] main - Command "help" executed by "Saix93" with args "-nyaa"
+[2018-12-24 01:03:18.573] [DEBUG] main - Command "nyaa" executed by "Saix93" with args ""
+[2018-12-24 01:03:39.878] [DEBUG] main - Command "nyaa" executed by "Saix93" with args "-h"
+[2018-12-24 01:04:10.777] [DEBUG] main - Command "nyaa" executed by "Saix93" with args "-hs ansatsu"
+[2018-12-24 01:04:17.464] [WARN] main - User Ajotaso tried to invoke undefined command hs
+[2018-12-24 01:04:41.697] [DEBUG] main - Command "nyaa" executed by "Ajotaso" with args "hs goblin"
+[2018-12-24 01:07:10.055] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:07:32.062] [DEBUG] main - Command "play" executed by "Saix93" with args "Chocolate"
+[2018-12-24 01:07:32.069] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:07:43.824] [DEBUG] main - Command "play" executed by "Saix93" with args "Chocolate.mp3"
+[2018-12-24 01:07:43.827] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:07:51.865] [DEBUG] main - Command "play" executed by "Saix93" with args "chocolate.mp3"
+[2018-12-24 01:07:51.869] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:07:56.648] [DEBUG] main - Command "play" executed by "Saix93" with args "chocolate"
+[2018-12-24 01:07:56.651] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:08:00.400] [DEBUG] main - Command "play" executed by "Saix93" with args "-h"
+[2018-12-24 01:08:07.308] [DEBUG] main - Command "play" executed by "Saix93" with args "-l"
+[2018-12-24 01:08:07.325] [INFO] main - DSP-BOT is shutting down...
+[2018-12-24 01:10:31.775] [DEBUG] main - Command "block" loaded
+[2018-12-24 01:10:31.791] [DEBUG] main - Command "fort" loaded
+[2018-12-24 01:10:31.797] [DEBUG] main - Command "grant" loaded
+[2018-12-24 01:10:31.803] [DEBUG] main - Command "greet" loaded
+[2018-12-24 01:10:31.808] [DEBUG] main - Command "help" loaded
+[2018-12-24 01:10:31.813] [DEBUG] main - Command "img" loaded
+[2018-12-24 01:10:31.818] [DEBUG] main - Command "joinme" loaded
+[2018-12-24 01:10:31.823] [DEBUG] main - Command "leave" loaded
+[2018-12-24 01:10:33.508] [DEBUG] main - Command "nyaa" loaded
+[2018-12-24 01:10:33.899] [DEBUG] main - Command "play" loaded
+[2018-12-24 01:10:36.970] [DEBUG] main - Command "rae" loaded
+[2018-12-24 01:10:37.322] [DEBUG] main - Command "say" loaded
+[2018-12-24 01:10:38.448] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-24 01:10:44.133] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:10:47.847] [DEBUG] main - Command "play" executed by "Saix93" with args "chocolate"
+[2018-12-24 01:10:47.854] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:10:51.635] [DEBUG] main - Command "play" executed by "Saix93" with args "Chocolate"
+[2018-12-24 01:11:11.701] [WARN] main - User Saix93 tried to invoke undefined command stop
+[2018-12-24 01:11:18.932] [WARN] main - User Saix93 tried to invoke undefined command h
+[2018-12-24 01:11:22.673] [DEBUG] main - Command "help" executed by "Saix93" with args ""
+[2018-12-24 01:11:28.405] [DEBUG] main - Command "play" executed by "Saix93" with args "-h"
+[2018-12-24 01:11:36.679] [DEBUG] main - Command "say" executed by "Saix93" with args "hola"
+[2018-12-24 01:11:38.990] [WARN] main - User Linkmetal tried to invoke undefined command basch
+[2018-12-24 01:11:45.351] [WARN] main - User Linkmetal tried to invoke undefined command callatebasch
+[2018-12-24 01:11:49.477] [DEBUG] main - Command "help" executed by "Saix93" with args ""
+[2018-12-24 01:12:10.763] [DEBUG] main - Command "play" executed by "Saix93" with args "-l"
+[2018-12-24 01:12:37.035] [DEBUG] main - Command "play" executed by "Saix93" with args "Juan magan"
+[2018-12-24 01:12:54.321] [DEBUG] main - Command "play" executed by "Saix93" with args "Chocolate"
+[2018-12-24 01:13:27.902] [DEBUG] main - Command "help" executed by "Saix93" with args ""
+[2018-12-24 01:13:31.949] [DEBUG] main - Command "img" executed by "Saix93" with args "-l"
+[2018-12-24 01:13:31.987] [INFO] main - DSP-BOT is shutting down...
+[2018-12-24 01:14:04.983] [DEBUG] main - Command "block" loaded
+[2018-12-24 01:14:05.001] [DEBUG] main - Command "fort" loaded
+[2018-12-24 01:14:05.006] [DEBUG] main - Command "grant" loaded
+[2018-12-24 01:14:05.012] [DEBUG] main - Command "greet" loaded
+[2018-12-24 01:14:05.018] [DEBUG] main - Command "help" loaded
+[2018-12-24 01:14:05.024] [DEBUG] main - Command "img" loaded
+[2018-12-24 01:14:05.029] [DEBUG] main - Command "joinme" loaded
+[2018-12-24 01:14:05.037] [DEBUG] main - Command "leave" loaded
+[2018-12-24 01:14:06.755] [DEBUG] main - Command "nyaa" loaded
+[2018-12-24 01:14:07.160] [DEBUG] main - Command "play" loaded
+[2018-12-24 01:14:10.215] [DEBUG] main - Command "rae" loaded
+[2018-12-24 01:14:10.572] [DEBUG] main - Command "say" loaded
+[2018-12-24 01:14:11.949] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-24 01:14:23.834] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:14:28.452] [DEBUG] main - Command "img" executed by "Saix93" with args "-l"
+[2018-12-24 01:14:35.741] [DEBUG] main - Command "img" executed by "Saix93" with args "Vitoria"
+[2018-12-24 01:14:54.608] [DEBUG] main - Command "img" executed by "Basch" with args "peter"
+[2018-12-24 01:14:54.612] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:14:58.623] [DEBUG] main - Command "img" executed by "Saix93" with args "sacred3"
+[2018-12-24 01:15:06.283] [DEBUG] main - Command "img" executed by "Basch" with args "Peter"
+[2018-12-24 01:15:27.245] [DEBUG] main - Command "img" executed by "Basch" with args "cristiano"
+[2018-12-24 01:16:03.019] [DEBUG] main - Command "img" executed by "DevilCloud" with args "isra"
+[2018-12-24 01:16:17.478] [DEBUG] main - Command "img" executed by "DevilCloud" with args "fierrote"
+[2018-12-24 01:16:34.260] [DEBUG] main - Command "img" executed by "DevilCloud" with args "eurovision"
+[2018-12-24 01:16:47.680] [DEBUG] main - Command "img" executed by "DevilCloud" with args "oldman"
+[2018-12-24 01:16:55.234] [DEBUG] main - Command "img" executed by "DevilCloud" with args "oldman 2"
+[2018-12-24 01:16:55.238] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:16:59.140] [DEBUG] main - Command "img" executed by "DevilCloud" with args "oldman2"
+[2018-12-24 01:17:13.058] [INFO] main - Saving config to file...
+[2018-12-24 01:18:36.591] [DEBUG] main - Command "block" loaded
+[2018-12-24 01:18:36.610] [DEBUG] main - Command "fort" loaded
+[2018-12-24 01:18:36.620] [DEBUG] main - Command "grant" loaded
+[2018-12-24 01:18:36.626] [DEBUG] main - Command "greet" loaded
+[2018-12-24 01:18:36.642] [DEBUG] main - Command "help" loaded
+[2018-12-24 01:18:36.652] [DEBUG] main - Command "img" loaded
+[2018-12-24 01:18:36.658] [DEBUG] main - Command "joinme" loaded
+[2018-12-24 01:18:36.669] [DEBUG] main - Command "leave" loaded
+[2018-12-24 01:18:38.807] [DEBUG] main - Command "nyaa" loaded
+[2018-12-24 01:18:39.291] [DEBUG] main - Command "play" loaded
+[2018-12-24 01:18:43.081] [DEBUG] main - Command "rae" loaded
+[2018-12-24 01:18:43.541] [DEBUG] main - Command "say" loaded
+[2018-12-24 01:18:44.742] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-24 01:18:54.742] [DEBUG] main - Command "img" executed by "Basch" with args "gamba"
+[2018-12-24 01:19:02.475] [DEBUG] main - Command "img" executed by "Basch" with args "gitano"
+[2018-12-24 01:19:16.808] [DEBUG] main - Command "img" executed by "DevilCloud" with args "robo_corazon"
+[2018-12-24 01:19:34.603] [DEBUG] main - Command "img" executed by "Basch" with args "hdp"
+[2018-12-24 01:19:37.932] [DEBUG] main - Command "img" executed by "DevilCloud" with args "hitler"
+[2018-12-24 01:19:52.439] [DEBUG] main - Command "img" executed by "DevilCloud" with args "foto_spiderman"
+[2018-12-24 01:20:01.701] [DEBUG] main - Command "img" executed by "Basch" with args "Ehque"
+[2018-12-24 01:20:30.366] [DEBUG] main - Command "img" executed by "Ajotaso" with args "españa"
+[2018-12-24 01:20:30.370] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:20:41.281] [DEBUG] main - Command "img" executed by "Saix93" with args "-l"
+[2018-12-24 01:21:01.755] [DEBUG] main - Command "img" executed by "Ajotaso" with args "cristiano"
+[2018-12-24 01:21:12.458] [DEBUG] main - Command "img" executed by "Ajotaso" with args "fierrote"
+[2018-12-24 01:21:19.842] [DEBUG] main - Command "img" executed by "Linkmetal" with args "hitler"
+[2018-12-24 01:29:45.091] [DEBUG] main - Command "img" executed by "DevilCloud" with args "help"
+[2018-12-24 01:29:45.094] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:29:51.360] [DEBUG] main - Command "img" executed by "DevilCloud" with args "-l"
+[2018-12-24 01:30:02.945] [DEBUG] main - Command "img" executed by "DevilCloud" with args "l"
+[2018-12-24 01:30:02.948] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:30:09.495] [DEBUG] main - Command "img" executed by "DevilCloud" with args "-l"
+[2018-12-24 01:30:41.886] [DEBUG] main - Command "img" executed by "Basch" with args "lubri8"
+[2018-12-24 01:30:49.714] [DEBUG] main - Command "img" executed by "Basch" with args "lubri"
+[2018-12-24 01:31:03.216] [DEBUG] main - Command "img" executed by "Basch" with args "lubri2"
+[2018-12-24 01:31:29.291] [DEBUG] main - Command "img" executed by "Basch" with args "lubri4+"
+[2018-12-24 01:31:29.295] [WARN] main - Error: The file doesn' exist
+[2018-12-24 01:31:34.108] [DEBUG] main - Command "img" executed by "Basch" with args "lubri4"
+[2018-12-24 01:31:39.271] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:31:45.038] [DEBUG] main - Command "play" executed by "Saix93" with args "hola"
+[2018-12-24 01:31:45.045] [WARN] main - Error: The file doesn't exist
+[2018-12-24 01:31:48.171] [DEBUG] main - Command "say" executed by "Saix93" with args "hola"
+[2018-12-24 01:32:02.302] [DEBUG] main - Command "say" executed by "Ajotaso" with args "viva espamaaaaaaa"
+[2018-12-24 01:32:30.167] [DEBUG] main - Command "say" executed by "DevilCloud" with args "soy tartaja"
+[2018-12-24 01:32:51.059] [DEBUG] main - Command "say" executed by "DevilCloud" with args "tengo poblemas"
+[2018-12-24 01:33:09.297] [DEBUG] main - Command "leave" executed by "Saix93" with args ""
+[2018-12-24 01:33:10.523] [INFO] main - Saving config to file...
+[2018-12-24 01:38:20.924] [DEBUG] main - Command "block" loaded
+[2018-12-24 01:38:20.939] [DEBUG] main - Command "fort" loaded
+[2018-12-24 01:38:20.945] [DEBUG] main - Command "grant" loaded
+[2018-12-24 01:38:20.950] [DEBUG] main - Command "greet" loaded
+[2018-12-24 01:38:20.956] [DEBUG] main - Command "help" loaded
+[2018-12-24 01:38:20.961] [DEBUG] main - Command "img" loaded
+[2018-12-24 01:38:20.966] [DEBUG] main - Command "joinme" loaded
+[2018-12-24 01:38:20.972] [DEBUG] main - Command "leave" loaded
+[2018-12-24 01:38:22.676] [DEBUG] main - Command "nyaa" loaded
+[2018-12-24 01:38:23.053] [DEBUG] main - Command "play" loaded
+[2018-12-24 01:38:26.099] [DEBUG] main - Command "rae" loaded
+[2018-12-24 01:38:26.456] [DEBUG] main - Command "say" loaded
+[2018-12-24 01:38:27.571] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-24 01:38:41.039] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-24 01:38:43.711] [DEBUG] main - Command "say" executed by "Saix93" with args "hola"
+[2018-12-24 01:38:56.576] [DEBUG] main - Command "leave" executed by "Saix93" with args ""
+[2018-12-24 01:39:19.633] [DEBUG] main - Command "play" executed by "Basch" with args "Duele"
+[2018-12-24 01:39:19.638] [WARN] main - Error: I am not connected to any voice channel! Use -joinme first!
+[2018-12-25 00:10:52.614] [DEBUG] main - Command "joinme" executed by "DevilCloud" with args ""
+[2018-12-25 00:10:57.531] [DEBUG] main - Command "say" executed by "DevilCloud" with args "hola"
+[2018-12-25 00:11:02.445] [DEBUG] main - Command "leave" executed by "DevilCloud" with args ""
+[2018-12-25 20:34:48.815] [DEBUG] main - Command "img" executed by "Saix93" with args "lubri_navidad"
+[2018-12-25 21:04:24.236] [INFO] main - Saving config to file...
+[2018-12-25 21:07:20.569] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:07:20.589] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:07:20.595] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:07:20.600] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:07:20.605] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:07:20.611] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:07:20.616] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:07:20.622] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:07:22.503] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:07:22.934] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:07:26.072] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:07:26.471] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:07:28.235] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-25 21:08:38.101] [INFO] main - Saving config to file...
+[2018-12-25 21:11:52.181] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:11:52.202] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:11:52.210] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:11:52.219] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:11:52.226] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:11:52.242] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:11:52.255] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:11:52.267] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:11:55.107] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:11:55.679] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:11:59.381] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:11:59.858] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:12:01.036] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-25 21:12:31.167] [INFO] main - Saving config to file...
+[2018-12-25 21:13:00.814] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:20:41.982] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:20:42.003] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:20:42.015] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:20:42.029] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:20:42.041] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:20:42.053] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:20:42.066] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:20:42.077] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:20:44.228] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:20:44.690] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:20:48.367] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:20:48.848] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:20:50.146] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-25 21:20:52.530] [INFO] main - Saving config to file...
+[2018-12-25 21:22:23.665] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:26:23.918] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:26:23.939] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:26:23.947] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:26:23.954] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:26:23.964] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:26:23.979] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:26:23.986] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:26:23.993] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:26:26.360] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:26:26.852] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:26:30.545] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:26:31.017] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:26:33.295] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-25 21:29:08.062] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:29:08.088] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:29:08.101] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:29:08.115] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:29:08.125] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:29:08.133] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:29:08.141] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:29:08.151] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:29:11.025] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:29:11.506] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:29:15.573] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:29:16.086] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:29:17.243] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-25 21:31:55.290] [DEBUG] main - Command "block" loaded
+[2018-12-25 21:31:55.336] [DEBUG] main - Command "fort" loaded
+[2018-12-25 21:31:55.347] [DEBUG] main - Command "grant" loaded
+[2018-12-25 21:31:55.366] [DEBUG] main - Command "greet" loaded
+[2018-12-25 21:31:55.374] [DEBUG] main - Command "help" loaded
+[2018-12-25 21:31:55.382] [DEBUG] main - Command "img" loaded
+[2018-12-25 21:31:55.396] [DEBUG] main - Command "joinme" loaded
+[2018-12-25 21:31:55.405] [DEBUG] main - Command "leave" loaded
+[2018-12-25 21:31:58.089] [DEBUG] main - Command "nyaa" loaded
+[2018-12-25 21:31:58.562] [DEBUG] main - Command "play" loaded
+[2018-12-25 21:32:03.209] [DEBUG] main - Command "rae" loaded
+[2018-12-25 21:32:03.792] [DEBUG] main - Command "say" loaded
+[2018-12-25 21:32:05.818] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-26 17:17:32.507] [DEBUG] main - Command "block" loaded
+[2018-12-26 17:17:32.574] [DEBUG] main - Command "fort" loaded
+[2018-12-26 17:17:32.600] [DEBUG] main - Command "grant" loaded
+[2018-12-26 17:17:32.611] [DEBUG] main - Command "greet" loaded
+[2018-12-26 17:17:32.631] [DEBUG] main - Command "help" loaded
+[2018-12-26 17:17:32.655] [DEBUG] main - Command "img" loaded
+[2018-12-26 17:17:32.665] [DEBUG] main - Command "joinme" loaded
+[2018-12-26 17:17:32.703] [DEBUG] main - Command "leave" loaded
+[2018-12-26 17:17:36.833] [DEBUG] main - Command "nyaa" loaded
+[2018-12-26 17:17:37.659] [DEBUG] main - Command "play" loaded
+[2018-12-26 17:46:50.464] [DEBUG] main - Command "rae" loaded
+[2018-12-26 17:46:51.154] [DEBUG] main - Command "say" loaded
+[2018-12-26 17:46:52.751] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-26 18:08:09.017] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2018-12-26 18:08:46.279] [DEBUG] main - Command "say" executed by "Saix93" with args "hola"
+[2018-12-26 18:09:16.628] [DEBUG] main - Command "say" executed by "Saix93" with args "motherfucker"
+[2018-12-26 18:09:35.999] [DEBUG] main - Command "img" executed by "Saix93" with args "-l"
+[2018-12-26 18:10:24.500] [DEBUG] main - Command "img" executed by "Saix93" with args "hitman_duro"
+[2018-12-26 18:10:37.720] [DEBUG] main - Command "img" executed by "Saix93" with args "oldman"
+[2018-12-26 18:10:58.121] [DEBUG] main - Command "help" executed by "Saix93" with args ""
+[2018-12-26 18:11:07.423] [DEBUG] main - Command "rae" executed by "Saix93" with args "ola"
+[2018-12-26 18:11:55.038] [DEBUG] main - Command "leave" executed by "Saix93" with args ""
+[2018-12-26 18:14:01.681] [INFO] main - DSP-BOT is shutting down...
+[2018-12-26 18:17:20.903] [DEBUG] main - Command "block" loaded
+[2018-12-26 18:17:20.924] [DEBUG] main - Command "fort" loaded
+[2018-12-26 18:17:20.933] [DEBUG] main - Command "grant" loaded
+[2018-12-26 18:17:20.940] [DEBUG] main - Command "greet" loaded
+[2018-12-26 18:17:20.952] [DEBUG] main - Command "help" loaded
+[2018-12-26 18:17:20.959] [DEBUG] main - Command "img" loaded
+[2018-12-26 18:17:20.965] [DEBUG] main - Command "joinme" loaded
+[2018-12-26 18:17:20.971] [DEBUG] main - Command "leave" loaded
+[2018-12-26 18:17:23.358] [DEBUG] main - Command "nyaa" loaded
+[2018-12-26 18:17:23.785] [DEBUG] main - Command "play" loaded
+[2018-12-26 18:17:27.506] [DEBUG] main - Command "rae" loaded
+[2018-12-26 18:17:27.986] [DEBUG] main - Command "say" loaded
+[2018-12-26 18:17:30.468] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-26 20:24:51.575] [DEBUG] main - Command "img" executed by "Saix93" with args "lubri_halloween"
+[2018-12-27 01:04:00.435] [DEBUG] main - Command "img" executed by "Basch" with args "-l"
+[2018-12-27 01:04:11.551] [DEBUG] main - Command "img" executed by "Basch" with args "lubri_halloween"
+[2018-12-27 01:08:54.364] [DEBUG] main - Command "img" executed by "Basch" with args "lubri 4"
+[2018-12-27 01:08:54.368] [WARN] main - Error: The file doesn' exist
+[2018-12-27 01:08:59.785] [DEBUG] main - Command "img" executed by "Basch" with args "lubri4"
+[2018-12-27 01:09:05.994] [DEBUG] main - Command "img" executed by "Basch" with args "lubri3"
+[2018-12-27 01:09:15.320] [DEBUG] main - Command "img" executed by "Basch" with args "lubri2"
+[2018-12-27 01:14:00.658] [DEBUG] main - Command "img" executed by "Basch" with args "lubri_navidad"
+[2018-12-27 04:14:38.167] [INFO] main - Saving config to file...
+[2018-12-27 04:15:05.299] [DEBUG] main - Command "block" loaded
+[2018-12-27 04:15:05.314] [DEBUG] main - Command "fort" loaded
+[2018-12-27 04:15:05.320] [DEBUG] main - Command "grant" loaded
+[2018-12-27 04:15:05.326] [DEBUG] main - Command "greet" loaded
+[2018-12-27 04:15:05.331] [DEBUG] main - Command "help" loaded
+[2018-12-27 04:15:05.337] [DEBUG] main - Command "img" loaded
+[2018-12-27 04:15:05.341] [DEBUG] main - Command "joinme" loaded
+[2018-12-27 04:15:05.347] [DEBUG] main - Command "leave" loaded
+[2018-12-27 04:15:07.213] [DEBUG] main - Command "nyaa" loaded
+[2018-12-27 04:15:07.586] [DEBUG] main - Command "play" loaded
+[2018-12-27 04:15:10.759] [DEBUG] main - Command "rae" loaded
+[2018-12-27 04:15:11.150] [DEBUG] main - Command "say" loaded
+[2018-12-27 04:15:12.292] [INFO] main - DSP BOT: All packed up and ready to go!
+[2018-12-27 21:46:44.080] [DEBUG] main - Command "img" executed by "Basch" with args "lubri2"
+[2018-12-27 21:48:21.541] [DEBUG] main - Command "img" executed by "Basch" with args "lubri_halloween"
+[2018-12-27 21:48:38.814] [DEBUG] main - Command "img" executed by "Basch" with args "lubri"
+[2018-12-29 01:19:27.724] [DEBUG] main - Command "img" executed by "Basch" with args "vitoria"
+[2018-12-29 01:19:27.729] [WARN] main - Error: The file doesn' exist
+[2018-12-29 01:19:32.942] [DEBUG] main - Command "img" executed by "Basch" with args "victoria"
+[2018-12-29 01:19:32.946] [WARN] main - Error: The file doesn' exist
+[2018-12-29 01:19:37.853] [DEBUG] main - Command "img" executed by "Basch" with args "-l"
+[2018-12-29 01:19:46.432] [DEBUG] main - Command "img" executed by "Basch" with args "Vitoria"
+[2018-12-29 01:23:58.574] [DEBUG] main - Command "img" executed by "Basch" with args "robo_corazon"
+[2018-12-29 01:24:24.774] [DEBUG] main - Command "img" executed by "Basch" with args "ornitorrinco"
+[2018-12-30 17:48:06.087] [DEBUG] main - Command "img" executed by "Basch" with args "Vitoria"
+[2019-01-01 22:30:49.420] [DEBUG] main - Command "play" executed by "Saix93" with args "ehque"
+[2019-01-01 22:30:49.426] [WARN] main - Error: I am not connected to any voice channel! Use -joinme first!
+[2019-01-01 22:30:53.032] [DEBUG] main - Command "joinme" executed by "Saix93" with args ""
+[2019-01-01 22:30:55.604] [DEBUG] main - Command "play" executed by "Saix93" with args "-l"
+[2019-01-01 22:31:04.476] [WARN] main - User Saix93 tried to invoke undefined command plau
+[2019-01-01 22:31:07.904] [DEBUG] main - Command "play" executed by "Saix93" with args "Oh"
+[2019-01-01 22:31:19.945] [DEBUG] main - Command "leave" executed by "Saix93" with args ""
+[2019-01-01 22:31:40.567] [DEBUG] main - Command "img" executed by "Saix93" with args "ehque"
+[2019-01-01 22:31:40.572] [WARN] main - Error: The file doesn' exist
+[2019-01-01 22:31:44.578] [DEBUG] main - Command "img" executed by "Saix93" with args "-l"
+[2019-01-01 22:31:48.818] [DEBUG] main - Command "img" executed by "Saix93" with args "Ehque"
+[2019-01-02 01:33:16.829] [INFO] main - DSP-BOT is shutting down...
+[2019-01-02 05:46:01.150] [DEBUG] main - Command "block" loaded
+[2019-01-02 05:46:01.174] [DEBUG] main - Command "fort" loaded
+[2019-01-02 05:46:01.181] [DEBUG] main - Command "grant" loaded
+[2019-01-02 05:46:01.186] [DEBUG] main - Command "greet" loaded
+[2019-01-02 05:46:01.192] [DEBUG] main - Command "help" loaded
+[2019-01-02 05:46:01.197] [DEBUG] main - Command "img" loaded
+[2019-01-02 05:46:01.203] [DEBUG] main - Command "joinme" loaded
+[2019-01-02 05:46:01.210] [DEBUG] main - Command "leave" loaded
+[2019-01-02 05:46:02.916] [DEBUG] main - Command "nyaa" loaded
+[2019-01-02 05:46:03.295] [DEBUG] main - Command "play" loaded
+[2019-01-02 05:46:06.356] [DEBUG] main - Command "rae" loaded
+[2019-01-02 05:46:06.716] [DEBUG] main - Command "say" loaded
+[2019-01-02 05:46:08.128] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-02 21:24:32.038] [INFO] main - DSP-BOT is shutting down...
+[2019-01-04 02:29:28.074] [DEBUG] main - Command "block" loaded
+[2019-01-04 02:29:28.089] [DEBUG] main - Command "fort" loaded
+[2019-01-04 02:29:28.095] [DEBUG] main - Command "grant" loaded
+[2019-01-04 02:29:28.101] [DEBUG] main - Command "greet" loaded
+[2019-01-04 02:29:28.107] [DEBUG] main - Command "help" loaded
+[2019-01-04 02:29:28.112] [DEBUG] main - Command "img" loaded
+[2019-01-04 02:29:28.117] [DEBUG] main - Command "joinme" loaded
+[2019-01-04 02:29:28.125] [DEBUG] main - Command "leave" loaded
+[2019-01-04 02:29:29.861] [DEBUG] main - Command "nyaa" loaded
+[2019-01-04 02:29:30.243] [DEBUG] main - Command "play" loaded
+[2019-01-04 02:29:33.298] [DEBUG] main - Command "rae" loaded
+[2019-01-04 02:29:33.640] [DEBUG] main - Command "say" loaded
+[2019-01-04 02:29:34.792] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-04 20:49:37.957] [INFO] main - DSP-BOT is shutting down...
+[2019-01-04 23:36:05.405] [DEBUG] main - Command "block" loaded
+[2019-01-04 23:36:05.423] [DEBUG] main - Command "fort" loaded
+[2019-01-04 23:36:05.429] [DEBUG] main - Command "grant" loaded
+[2019-01-04 23:36:05.435] [DEBUG] main - Command "greet" loaded
+[2019-01-04 23:36:05.440] [DEBUG] main - Command "help" loaded
+[2019-01-04 23:36:05.445] [DEBUG] main - Command "img" loaded
+[2019-01-04 23:36:05.450] [DEBUG] main - Command "joinme" loaded
+[2019-01-04 23:36:05.456] [DEBUG] main - Command "leave" loaded
+[2019-01-04 23:36:07.150] [DEBUG] main - Command "nyaa" loaded
+[2019-01-04 23:36:07.519] [DEBUG] main - Command "play" loaded
+[2019-01-04 23:36:10.595] [DEBUG] main - Command "rae" loaded
+[2019-01-04 23:36:10.942] [DEBUG] main - Command "say" loaded
+[2019-01-04 23:36:12.050] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-06 03:45:32.828] [INFO] main - DSP-BOT is shutting down...
+[2019-01-06 04:23:56.966] [DEBUG] main - Command "block" loaded
+[2019-01-06 04:23:56.982] [DEBUG] main - Command "fort" loaded
+[2019-01-06 04:23:56.987] [DEBUG] main - Command "grant" loaded
+[2019-01-06 04:23:56.993] [DEBUG] main - Command "greet" loaded
+[2019-01-06 04:23:56.999] [DEBUG] main - Command "help" loaded
+[2019-01-06 04:23:57.006] [DEBUG] main - Command "img" loaded
+[2019-01-06 04:23:57.011] [DEBUG] main - Command "joinme" loaded
+[2019-01-06 04:23:57.018] [DEBUG] main - Command "leave" loaded
+[2019-01-06 04:23:58.776] [DEBUG] main - Command "nyaa" loaded
+[2019-01-06 04:23:59.175] [DEBUG] main - Command "play" loaded
+[2019-01-06 04:24:02.275] [DEBUG] main - Command "rae" loaded
+[2019-01-06 04:24:02.616] [DEBUG] main - Command "say" loaded
+[2019-01-06 04:24:03.738] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-06 19:30:42.536] [DEBUG] main - Command "img" executed by "Basch" with args "Vitoria"
+[2019-01-07 22:44:13.813] [DEBUG] main - Command "img" executed by "Basch" with args "lubri2"
+[2019-01-07 22:44:47.671] [DEBUG] main - Command "img" executed by "Basch" with args "-l"
+[2019-01-07 22:44:58.628] [DEBUG] main - Command "img" executed by "Basch" with args "lubri"
+[2019-01-07 22:45:04.099] [DEBUG] main - Command "img" executed by "Basch" with args "lubri3"
+[2019-01-07 22:45:12.394] [DEBUG] main - Command "img" executed by "Basch" with args "lubri4"
+[2019-01-07 22:45:19.163] [DEBUG] main - Command "img" executed by "Basch" with args "lubri5"
+[2019-01-07 22:45:34.934] [DEBUG] main - Command "img" executed by "Basch" with args "lubri6"
+[2019-01-07 22:45:48.858] [DEBUG] main - Command "img" executed by "Basch" with args "lubri7"
+[2019-01-07 22:45:58.662] [DEBUG] main - Command "img" executed by "Basch" with args "lubri8"
+[2019-01-07 22:46:12.480] [DEBUG] main - Command "img" executed by "Basch" with args "lubri_halloween"
+[2019-01-07 22:46:29.204] [DEBUG] main - Command "img" executed by "Basch" with args "lubri_navidad"
+[2019-01-08 18:32:14.755] [INFO] main - DSP-BOT is shutting down...
+[2019-01-09 14:25:00.853] [DEBUG] main - Command "block" loaded
+[2019-01-09 14:25:00.875] [DEBUG] main - Command "fort" loaded
+[2019-01-09 14:25:00.883] [DEBUG] main - Command "grant" loaded
+[2019-01-09 14:25:00.889] [DEBUG] main - Command "greet" loaded
+[2019-01-09 14:25:00.895] [DEBUG] main - Command "help" loaded
+[2019-01-09 14:25:00.902] [DEBUG] main - Command "img" loaded
+[2019-01-09 14:25:00.908] [DEBUG] main - Command "joinme" loaded
+[2019-01-09 14:25:00.914] [DEBUG] main - Command "leave" loaded
+[2019-01-09 14:25:02.665] [DEBUG] main - Command "nyaa" loaded
+[2019-01-09 14:25:03.054] [DEBUG] main - Command "play" loaded
+[2019-01-09 14:25:06.041] [DEBUG] main - Command "rae" loaded
+[2019-01-09 14:25:06.394] [DEBUG] main - Command "say" loaded
+[2019-01-09 14:25:07.612] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-10 03:56:56.350] [INFO] main - DSP-BOT is shutting down...
+[2019-01-10 20:20:28.495] [DEBUG] main - Command "block" loaded
+[2019-01-10 20:20:28.510] [DEBUG] main - Command "fort" loaded
+[2019-01-10 20:20:28.516] [DEBUG] main - Command "grant" loaded
+[2019-01-10 20:20:28.521] [DEBUG] main - Command "greet" loaded
+[2019-01-10 20:20:28.529] [DEBUG] main - Command "help" loaded
+[2019-01-10 20:20:28.534] [DEBUG] main - Command "img" loaded
+[2019-01-10 20:20:28.540] [DEBUG] main - Command "joinme" loaded
+[2019-01-10 20:20:28.546] [DEBUG] main - Command "leave" loaded
+[2019-01-10 20:20:30.437] [DEBUG] main - Command "nyaa" loaded
+[2019-01-10 20:20:30.919] [DEBUG] main - Command "play" loaded
+[2019-01-10 20:20:34.211] [DEBUG] main - Command "rae" loaded
+[2019-01-10 20:20:34.581] [DEBUG] main - Command "say" loaded
+[2019-01-10 20:20:37.298] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-11 01:17:29.631] [INFO] main - DSP-BOT is shutting down...
+[2019-01-11 18:36:54.879] [DEBUG] main - Command "block" loaded
+[2019-01-11 18:36:54.900] [DEBUG] main - Command "fort" loaded
+[2019-01-11 18:36:54.913] [DEBUG] main - Command "grant" loaded
+[2019-01-11 18:36:54.919] [DEBUG] main - Command "greet" loaded
+[2019-01-11 18:36:54.927] [DEBUG] main - Command "help" loaded
+[2019-01-11 18:36:54.937] [DEBUG] main - Command "img" loaded
+[2019-01-11 18:36:54.945] [DEBUG] main - Command "joinme" loaded
+[2019-01-11 18:36:54.952] [DEBUG] main - Command "leave" loaded
+[2019-01-11 18:36:56.716] [DEBUG] main - Command "nyaa" loaded
+[2019-01-11 18:36:57.081] [DEBUG] main - Command "play" loaded
+[2019-01-11 18:37:00.053] [DEBUG] main - Command "rae" loaded
+[2019-01-11 18:37:00.396] [DEBUG] main - Command "say" loaded
+[2019-01-11 18:37:01.584] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-11 22:57:59.758] [INFO] main - DSP-BOT is shutting down...
+[2019-01-13 14:27:21.234] [DEBUG] main - Command "block" loaded
+[2019-01-13 14:27:21.250] [DEBUG] main - Command "fort" loaded
+[2019-01-13 14:27:21.256] [DEBUG] main - Command "grant" loaded
+[2019-01-13 14:27:21.266] [DEBUG] main - Command "greet" loaded
+[2019-01-13 14:27:21.271] [DEBUG] main - Command "help" loaded
+[2019-01-13 14:27:21.281] [DEBUG] main - Command "img" loaded
+[2019-01-13 14:27:21.287] [DEBUG] main - Command "joinme" loaded
+[2019-01-13 14:27:21.293] [DEBUG] main - Command "leave" loaded
+[2019-01-13 14:27:22.945] [DEBUG] main - Command "nyaa" loaded
+[2019-01-13 14:27:23.305] [DEBUG] main - Command "play" loaded
+[2019-01-13 14:27:26.333] [DEBUG] main - Command "rae" loaded
+[2019-01-13 14:27:26.673] [DEBUG] main - Command "say" loaded
+[2019-01-13 14:27:28.457] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-01-13 21:19:40.390] [DEBUG] main - Command "img" executed by "Basch" with args "Vitoria"
+[2019-01-13 22:06:36.190] [INFO] main - DSP-BOT is shutting down...
+[2019-02-02 14:00:56.518] [DEBUG] main - Command "block" loaded
+[2019-02-02 14:00:56.533] [DEBUG] main - Command "fort" loaded
+[2019-02-02 14:00:56.539] [DEBUG] main - Command "grant" loaded
+[2019-02-02 14:00:56.544] [DEBUG] main - Command "greet" loaded
+[2019-02-02 14:00:56.550] [DEBUG] main - Command "help" loaded
+[2019-02-02 14:00:56.555] [DEBUG] main - Command "img" loaded
+[2019-02-02 14:00:56.560] [DEBUG] main - Command "joinme" loaded
+[2019-02-02 14:00:56.566] [DEBUG] main - Command "leave" loaded
+[2019-02-02 14:00:58.253] [DEBUG] main - Command "nyaa" loaded
+[2019-02-02 14:00:58.633] [DEBUG] main - Command "play" loaded
+[2019-02-02 14:01:01.704] [DEBUG] main - Command "rae" loaded
+[2019-02-02 14:01:02.076] [DEBUG] main - Command "say" loaded
+[2019-02-02 14:01:03.304] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-02-02 21:22:59.870] [INFO] main - DSP-BOT is shutting down...
+[2019-02-05 15:44:40.733] [DEBUG] main - Command "block" loaded
+[2019-02-05 15:44:40.752] [DEBUG] main - Command "fort" loaded
+[2019-02-05 15:44:40.760] [DEBUG] main - Command "grant" loaded
+[2019-02-05 15:44:40.767] [DEBUG] main - Command "greet" loaded
+[2019-02-05 15:44:40.773] [DEBUG] main - Command "help" loaded
+[2019-02-05 15:44:40.781] [DEBUG] main - Command "img" loaded
+[2019-02-05 15:44:40.788] [DEBUG] main - Command "joinme" loaded
+[2019-02-05 15:44:40.794] [DEBUG] main - Command "leave" loaded
+[2019-02-05 15:44:43.141] [DEBUG] main - Command "nyaa" loaded
+[2019-02-05 15:44:43.623] [DEBUG] main - Command "play" loaded
+[2019-02-05 15:44:47.358] [DEBUG] main - Command "rae" loaded
+[2019-02-05 15:44:47.854] [DEBUG] main - Command "say" loaded
+[2019-02-23 13:41:21.416] [DEBUG] main - Command "block" loaded
+[2019-02-23 13:41:21.439] [DEBUG] main - Command "fort" loaded
+[2019-02-23 13:41:21.447] [DEBUG] main - Command "grant" loaded
+[2019-02-23 13:41:21.453] [DEBUG] main - Command "greet" loaded
+[2019-02-23 13:41:21.459] [DEBUG] main - Command "help" loaded
+[2019-02-23 13:41:21.466] [DEBUG] main - Command "img" loaded
+[2019-02-23 13:41:21.472] [DEBUG] main - Command "joinme" loaded
+[2019-02-23 13:41:21.478] [DEBUG] main - Command "leave" loaded
+[2019-02-23 13:41:23.356] [DEBUG] main - Command "nyaa" loaded
+[2019-02-23 13:41:23.751] [DEBUG] main - Command "play" loaded
+[2019-02-23 13:41:26.879] [DEBUG] main - Command "rae" loaded
+[2019-02-23 13:41:27.215] [DEBUG] main - Command "say" loaded
+[2019-02-23 13:41:28.393] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-02-26 16:48:25.841] [INFO] main - DSP-BOT is shutting down...
+[2019-03-12 14:56:34.897] [DEBUG] main - Command "block" loaded
+[2019-03-12 14:56:34.915] [DEBUG] main - Command "fort" loaded
+[2019-03-12 14:56:34.923] [DEBUG] main - Command "grant" loaded
+[2019-03-12 14:56:34.929] [DEBUG] main - Command "greet" loaded
+[2019-03-12 14:56:34.933] [DEBUG] main - Command "help" loaded
+[2019-03-12 14:56:34.939] [DEBUG] main - Command "img" loaded
+[2019-03-12 14:56:34.945] [DEBUG] main - Command "joinme" loaded
+[2019-03-12 14:56:34.952] [DEBUG] main - Command "leave" loaded
+[2019-03-12 14:56:37.023] [DEBUG] main - Command "nyaa" loaded
+[2019-03-12 14:56:37.483] [DEBUG] main - Command "play" loaded
+[2019-03-12 14:56:41.013] [DEBUG] main - Command "rae" loaded
+[2019-03-12 14:56:41.397] [DEBUG] main - Command "say" loaded
+[2019-03-12 14:56:42.674] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-03-15 12:46:20.405] [INFO] main - DSP-BOT is shutting down...
+[2019-04-21 22:20:28.033] [DEBUG] main - Command "block" loaded
+[2019-04-21 22:20:28.058] [DEBUG] main - Command "fort" loaded
+[2019-04-21 22:20:28.065] [DEBUG] main - Command "grant" loaded
+[2019-04-21 22:20:28.070] [DEBUG] main - Command "greet" loaded
+[2019-04-21 22:20:28.076] [DEBUG] main - Command "help" loaded
+[2019-04-21 22:20:28.081] [DEBUG] main - Command "img" loaded
+[2019-04-21 22:20:28.088] [DEBUG] main - Command "joinme" loaded
+[2019-04-21 22:20:28.094] [DEBUG] main - Command "leave" loaded
+[2019-04-21 22:20:29.972] [DEBUG] main - Command "nyaa" loaded
+[2019-04-21 22:20:30.357] [DEBUG] main - Command "play" loaded
+[2019-04-21 22:20:33.402] [DEBUG] main - Command "rae" loaded
+[2019-04-21 22:20:33.750] [DEBUG] main - Command "say" loaded
+[2019-04-21 22:20:36.465] [INFO] main - DSP BOT: All packed up and ready to go!
+[2019-04-22 19:18:01.875] [DEBUG] main - Command "help" executed by "Handsome Toad" with args ""
+[2019-04-22 19:18:15.637] [DEBUG] main - Command "say" executed by "Handsome Toad" with args "mono"
+[2019-04-22 19:18:15.905] [WARN] main - Error: I am not connected to any voice channel! Use -joinme first!
+[2019-04-22 19:18:21.104] [DEBUG] main - Command "joinme" executed by "Handsome Toad" with args ""
+[2019-04-22 19:18:24.999] [DEBUG] main - Command "say" executed by "Handsome Toad" with args "mono"
+[2019-04-22 19:18:50.586] [DEBUG] main - Command "img" executed by "Handsome Toad" with args ""
+[2019-04-22 19:18:50.598] [WARN] main - Error: The file doesn' exist
+[2019-04-22 19:18:55.433] [DEBUG] main - Command "help" executed by "Handsome Toad" with args "img"
+[2019-04-22 19:19:04.250] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "l"
+[2019-04-22 19:19:04.255] [WARN] main - Error: The file doesn' exist
+[2019-04-22 19:19:07.583] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "-l"
+[2019-04-22 19:19:15.123] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "manita"
+[2019-04-22 19:19:32.216] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "hitman_duro"
+[2019-04-22 19:19:43.000] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "sacred3"
+[2019-04-22 19:19:57.975] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "isra"
+[2019-04-22 19:20:11.789] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "doppelganger"
+[2019-04-22 19:20:37.163] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "lubri2"
+[2019-04-22 19:20:55.750] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "fierrote"
+[2019-04-22 19:34:43.999] [DEBUG] main - Command "img" executed by "Handsome Toad" with args "-l"
+[2019-04-22 20:34:44.720] [INFO] main - DSP-BOT is shutting down...
+[2019-09-22 10:17:21.135] [DEBUG] main - Command "block" loaded
+[2019-09-22 10:17:21.153] [DEBUG] main - Command "fort" loaded
+[2019-09-22 10:17:21.162] [DEBUG] main - Command "grant" loaded
+[2019-09-22 10:17:21.168] [DEBUG] main - Command "greet" loaded
+[2019-09-22 10:17:21.176] [DEBUG] main - Command "help" loaded
+[2019-09-22 10:17:21.183] [DEBUG] main - Command "img" loaded
+[2019-09-22 10:17:21.189] [DEBUG] main - Command "joinme" loaded
+[2019-09-22 10:17:21.195] [DEBUG] main - Command "leave" loaded
+[2019-09-22 10:17:23.503] [DEBUG] main - Command "nyaa" loaded
+[2019-09-22 10:17:23.964] [DEBUG] main - Command "play" loaded
+[2019-09-22 10:17:27.941] [DEBUG] main - Command "rae" loaded
+[2019-09-22 10:17:28.415] [DEBUG] main - Command "say" loaded
+[2019-11-02 03:03:14.167] [INFO] main - Saving config to file...
