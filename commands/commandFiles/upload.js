@@ -2,6 +2,9 @@
 var Command = require('../../lib/command.js'),
     config = require('../../lib/ConfigManager.js').config;
 
+var fs = require('fs'),
+    request = require('request');
+
 var prefix = config.settings.prefix,
     commandName = 'upload';
 
@@ -24,9 +27,36 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
+var path = "content";
 
 function doUpload(message, client, args, options) {
-  console.log(args);
+  if (args.params.length > 0) {
+    var link = args.params[0];
+    var fileName = link.split("/")[link.split("/").length - 1].split(".");
+    var name = args.params[1] ? args.params[1] : fileName[0];
+    var extension = fileName[1];
+
+    var doingString = `Uploading file: ${name}.${extension}...`;
+    console.log(doingString);
+    message.channel.send(doingString);
+
+    download(link, `${name}.${extension}`, function () {
+      var doneString = `File: ${name}.${extension} uploaded!`;
+      console.log(doneString);
+      message.channel.send(doneString);
+    });
+  } else {
+    throw new Error('No hay parámetros');
+  }
 }
+
+function download(uri, filename, callback){
+  request.head(uri, function(err, res, body){
+    console.log('content-type:', res.headers['content-type']);
+    console.log('content-length:', res.headers['content-length']);
+
+    request(uri).pipe(fs.createWriteStream(path + filename)).on('close', callback);
+  });
+};
 
 module.exports = command;
