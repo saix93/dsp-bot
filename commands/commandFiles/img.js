@@ -28,6 +28,8 @@ var commandProperties = {
 
 var command = new Command(commandProperties);
 
+const audioPath = './content/images';
+
 const supportedExtensions = [
   'jpg',
   'jpeg',
@@ -39,7 +41,7 @@ function doImg(message, client, args, options) {
   if (options['l'] || options['list']) {
     var msg = "**List of available images:**\n\n";
 
-    fs.readdir('./content/images', function (err, files) {
+    fs.readdir(audioPath, function (err, files) {
       for (var i =  0; i < files.length; i++) {
         msg += `*- ${files[i].slice(0, -4)}*\n`;
       }
@@ -55,7 +57,7 @@ function doImg(message, client, args, options) {
     args.params[i] = args.params[i].toLowerCase();
   }
 
-  var path = `./content/images/${args.params.join(" ")}`;
+  var path = `${audioPath}/${args.params.join(" ")}`;
   var found = false;
   var fileExtension = '';
 

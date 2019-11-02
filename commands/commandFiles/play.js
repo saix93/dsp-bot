@@ -31,14 +31,16 @@ var commandProperties = {
 
 var command = new Command(commandProperties);
 
+const audioPath = './content/audio';
+
 function doPlay(message, client, args, options) {
   if (options['l'] || options['list']) {
     var msg = "**List of stored mp3 files:**\n\n";
 
-    fs.readdir('./content/audio', function (err, files) {
+    fs.readdir(audioPath, function (err, files) {
       for (var i =  0; i < files.length; i++) {
         if (i != files.length - 1) {
-          // mp3Duration(`./content/audio/${files[i]}`, function (err, duration) { // Bug, ya que la función es asíncrona y está dentro de un for
+          // mp3Duration(`${audioPath}/${files[i]}`, function (err, duration) { // Bug, ya que la función es asíncrona y está dentro de un for
           //   if (err) return console.log(err.message);
           //   msg += `*- ${files[i].slice(0, -4)} (${duration})*\n`;
           // });
@@ -66,10 +68,10 @@ function playFile(message, client, args, options) {
         args.params[i] = args.params[i].toLowerCase();
       }
 
-      var path = `./content/audio/${args.params.join(" ")}.mp3`;
+      var path = `${audioPath}/${args.params.join(" ")}.mp3`;
       if (fs.existsSync(path)) {
         client.currentAudio = connection.playFile(path);
-        mp3Duration(`./content/audio/${args.params.join(" ")}.mp3`, function (err, duration) {
+        mp3Duration(`${audioPath}/${args.params.join(" ")}.mp3`, function (err, duration) {
           if (err) return console.log(err.message);
           duration = String(duration / 60).substr(0, 4).replace('.', ':') + 'm';
           message.channel.send(`Playing ${args.params.join(" ")} (${duration})!`);
