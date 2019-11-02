@@ -64,17 +64,15 @@ function playFile(message, client, args, options) {
     const connection = client.voiceConnections.first();
     
     if (connection) {
-      for (var i = 0; i < args.params; i++) {
-        args.params[i] = args.params[i].toLowerCase();
-      }
+      var audioName = args.params.join(" ").toLowerCase();
 
-      var path = `${audioPath}/${args.params.join(" ")}.mp3`;
+      var path = `${audioPath}/${audioName}.mp3`;
       if (fs.existsSync(path)) {
         client.currentAudio = connection.playFile(path);
-        mp3Duration(`${audioPath}/${args.params.join(" ")}.mp3`, function (err, duration) {
+        mp3Duration(`${audioPath}/${audioName}.mp3`, function (err, duration) {
           if (err) return console.log(err.message);
           duration = String(duration / 60).substr(0, 4).replace('.', ':') + 'm';
-          message.channel.send(`Playing ${args.params.join(" ")} (${duration})!`);
+          message.channel.send(`Playing ${audioName} (${duration})!`);
         });
       } else {
         throw new Error('The file doesn\'t exist');

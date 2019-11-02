@@ -52,12 +52,9 @@ function doImg(message, client, args, options) {
     return;
   }
 
-  var imgName = args.params.join(" ");
-  for (var i = 0; i < args.params; i++) {
-    args.params[i] = args.params[i].toLowerCase();
-  }
+  var imgName = args.params.join(" ").toLowerCase();
 
-  var path = `${audioPath}/${args.params.join(" ")}`;
+  var path = `${audioPath}/${imgName}`;
   var found = false;
   var fileExtension = '';
 
