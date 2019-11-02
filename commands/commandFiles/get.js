@@ -27,7 +27,7 @@ var commandProperties = {
 };
 
 var command = new Command(commandProperties);
-var basePath = 'content\\';
+var basePath = 'content/';
 
 function doGet(message, client, args, options) {
   if (options['l'] || options['list']) {
