@@ -39,7 +39,7 @@ function doGet(message, client, args, options) {
   var fileName = args.params.join(" ").toLowerCase();
 
   if (!fileName) {
-    throw new Error("Error: Parameter missing");
+    throw new Error("Parameter missing");
   }
 
   var folders = fs.readdirSync(basePath);
@@ -80,7 +80,7 @@ function doGet(message, client, args, options) {
         message.channel.send(err);
       });
   } else {
-    throw new Error('The file doesn\' exist');
+    throw new Error('The file doesn\'t exist');
   }
 }
 

@@ -44,6 +44,7 @@ function doUpload(message, client, args, options) {
     var link = args.params[0];
     var fileName = link.split("/")[link.split("/").length - 1].split("?")[0].split(".");
     var name = args.params[1] ? args.params[1] : fileName[0];
+    name = name.toLowerCase();
     var extension = fileName[1];
     var path = "content";
 
